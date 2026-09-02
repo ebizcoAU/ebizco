@@ -1,0 +1,752 @@
+/* Homepage-only design system. Scoped entirely under .ebizco-home so it
+   can't leak into Header/Footer or any other route, which still rely on
+   the legacy theme stylesheet loaded in layout.js. */
+
+.ebizco-home {
+  --theme-color: #0037ff;
+  --theme-color-dark: #0026b8;
+  --navy: #0b1930;
+  --navy-mid: #16294d;
+  --smoke: #f6f7fc;
+  --title-color: #1a1a1a;
+  --body-color: #5b6172;
+  --border-color: #e5e8f2;
+  --white: #ffffff;
+  font-family: var(--body-font, "Fira Sans", sans-serif);
+  color: var(--body-color);
+  overflow-x: hidden;
+}
+
+.ebizco-home * {
+  box-sizing: border-box;
+}
+
+.ebizco-home img {
+  max-width: 100%;
+  display: block;
+}
+
+.ebizco-home .hp-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ebizco-home .hp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--theme-color);
+  margin-bottom: 14px;
+}
+
+.ebizco-home .hp-eyebrow i {
+  font-size: 0.9em;
+}
+
+.ebizco-home .hp-section-head {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.ebizco-home .hp-section-head.is-left {
+  margin: 0 0 48px;
+  text-align: left;
+}
+
+.ebizco-home .hp-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ebizco-home h2.hp-title {
+  font-size: clamp(28px, 3.4vw, 42px);
+}
+
+.ebizco-home .hp-lede {
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ebizco-home section {
+  position: relative;
+}
+
+.ebizco-home .hp-band {
+  padding: 100px 0;
+}
+
+.ebizco-home .hp-band--tight {
+  padding: 90px 0;
+}
+
+.ebizco-home .hp-band--smoke {
+  background: var(--smoke);
+}
+
+.ebizco-home .hp-band--navy {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---------- Hero ---------- */
+
+.ebizco-home .hp-hero {
+  position: relative;
+  background: var(--navy);
+  min-height: clamp(520px, 82vh, 760px);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.ebizco-home .hp-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease;
+}
+
+.ebizco-home .hp-hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ebizco-home .hp-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ebizco-home .hp-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(8, 16, 36, 0.94) 0%,
+    rgba(8, 16, 36, 0.82) 38%,
+    rgba(8, 16, 36, 0.58) 68%,
+    rgba(8, 16, 36, 0.42) 100%
+  );
+}
+
+.ebizco-home .hp-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 82vh, 760px);
+  padding: 64px 0;
+}
+
+.ebizco-home .hp-hero-copy {
+  max-width: 620px;
+  color: var(--white);
+}
+
+.ebizco-home .hp-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #8db0ff;
+  margin-bottom: 20px;
+}
+
+.ebizco-home .hp-hero-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 700;
+  font-size: clamp(34px, 4.6vw, 58px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+  color: var(--white);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.ebizco-home .hp-hero-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 32px;
+  max-width: 540px;
+}
+
+.ebizco-home .hp-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.ebizco-home .hp-hero-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ebizco-home .hp-hero-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.ebizco-home .hp-hero-dot {
+  width: 34px;
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.ebizco-home .hp-hero-dot.is-active {
+  background: var(--white);
+}
+
+.ebizco-home .hp-hero-count {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+.ebizco-home .hp-hero-arrows {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.ebizco-home .hp-hero-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.ebizco-home .hp-hero-arrow:hover {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+}
+
+/* ---------- Products ---------- */
+
+.ebizco-home .hp-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.ebizco-home .hp-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 34px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ebizco-home .hp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(11, 25, 48, 0.1);
+  border-color: transparent;
+}
+
+.ebizco-home .hp-card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: rgba(0, 55, 255, 0.08);
+  color: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.ebizco-home .hp-card-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--title-color);
+  margin: 0 0 12px;
+}
+
+.ebizco-home .hp-card-text {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+
+.ebizco-home .hp-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--title-color);
+  text-decoration: none;
+}
+
+.ebizco-home .hp-card-link i {
+  color: var(--theme-color);
+  transition: transform 0.2s ease;
+}
+
+.ebizco-home .hp-card-link:hover i {
+  transform: translateX(4px);
+}
+
+/* ---------- About ---------- */
+
+.ebizco-home .hp-about {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.ebizco-home .hp-about-img {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.ebizco-home .hp-about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ebizco-home .hp-checklist {
+  list-style: none;
+  margin: 26px 0 32px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ebizco-home .hp-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--title-color);
+}
+
+.ebizco-home .hp-checklist i {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 55, 255, 0.1);
+  color: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------- Buttons ---------- */
+
+.ebizco-home .hp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 16px 30px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.ebizco-home .hp-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ebizco-home .hp-btn--solid {
+  background: var(--theme-color);
+  color: var(--white);
+}
+
+.ebizco-home .hp-btn--solid:hover {
+  background: var(--theme-color-dark);
+  color: var(--white);
+}
+
+.ebizco-home .hp-btn--ghost-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.ebizco-home .hp-btn--ghost-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+.ebizco-home .hp-btn--outline {
+  border-color: var(--theme-color);
+  color: var(--theme-color);
+}
+
+.ebizco-home .hp-btn--outline:hover {
+  background: var(--theme-color);
+  color: var(--white);
+}
+
+/* ---------- Events ---------- */
+
+.ebizco-home .hp-events {
+  display: flex;
+  flex-direction: column;
+}
+
+.ebizco-home .hp-event {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 28px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ebizco-home .hp-event:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.ebizco-home .hp-event-date {
+  text-align: center;
+  font-family: var(--title-font, "Exo", sans-serif);
+  color: var(--theme-color);
+  border-right: 1px solid var(--border-color);
+  padding-right: 24px;
+}
+
+.ebizco-home .hp-event-join {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--theme-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.ebizco-home .hp-event-join:hover {
+  color: var(--title-color);
+}
+
+.ebizco-home .hp-event-date .day {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ebizco-home .hp-event-date .rest {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+  color: var(--body-color);
+}
+
+.ebizco-home .hp-event-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--title-color);
+  margin: 0 0 6px;
+}
+
+.ebizco-home .hp-event-sub {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.ebizco-home .hp-event-hosts {
+  display: flex;
+  gap: 18px;
+}
+
+.ebizco-home .hp-host {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ebizco-home .hp-host img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ebizco-home .hp-host-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--title-color);
+  line-height: 1.2;
+}
+
+.ebizco-home .hp-host-role {
+  font-size: 12px;
+  color: var(--body-color);
+  line-height: 1.2;
+}
+
+/* ---------- Testimonials ---------- */
+
+.ebizco-home .hp-testi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ebizco-home .hp-testi-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 28px;
+  backdrop-filter: blur(2px);
+}
+
+.ebizco-home .hp-testi-stars {
+  color: #fec624;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.ebizco-home .hp-testi-quote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.86);
+  margin: 0 0 22px;
+}
+
+.ebizco-home .hp-testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ebizco-home .hp-testi-author img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ebizco-home .hp-testi-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.ebizco-home .hp-testi-role {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Blog ---------- */
+
+.ebizco-home .hp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.ebizco-home .hp-blog-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ebizco-home .hp-blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(11, 25, 48, 0.1);
+}
+
+.ebizco-home .hp-blog-img {
+  aspect-ratio: 387 / 250;
+  overflow: hidden;
+}
+
+.ebizco-home .hp-blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ebizco-home .hp-blog-body {
+  padding: 24px 26px 28px;
+}
+
+.ebizco-home .hp-blog-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--body-color);
+  margin-bottom: 12px;
+}
+
+.ebizco-home .hp-blog-meta i {
+  margin-right: 6px;
+  color: var(--theme-color);
+}
+
+.ebizco-home .hp-blog-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--title-color);
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.ebizco-home .hp-blog-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ebizco-home .hp-blog-title a:hover {
+  color: var(--theme-color);
+}
+
+/* ---------- Closing CTA ---------- */
+
+.ebizco-home .hp-cta {
+  background: linear-gradient(120deg, var(--theme-color) 0%, #2a5bff 100%);
+  border-radius: 24px;
+  padding: 64px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.ebizco-home .hp-cta-title {
+  font-family: var(--title-font, "Exo", sans-serif);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+
+.ebizco-home .hp-cta-text {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1080px) {
+  .ebizco-home .hp-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ebizco-home .hp-testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ebizco-home .hp-about {
+    grid-template-columns: 1fr;
+  }
+
+  .ebizco-home .hp-about-img {
+    max-width: 420px;
+    aspect-ratio: 16 / 10;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .ebizco-home .hp-band,
+  .ebizco-home .hp-band--tight {
+    padding: 72px 0;
+  }
+
+  .ebizco-home .hp-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .ebizco-home .hp-event {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .ebizco-home .hp-event-date {
+    border-right: none;
+    padding-right: 0;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .ebizco-home .hp-cta {
+    padding: 48px 32px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .ebizco-home .hp-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .ebizco-home .hp-hero-arrows {
+    display: none;
+  }
+
+  .ebizco-home .hp-hero-nav {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,62 @@
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <>
+      <footer className="footer-wrapper footer-layout4 bg-theme" data-bg-src="/assets/img/bg/footer-bg-4-1.png">
+        <div className="shape1"><img src="/assets/img/shape/footer-shape-5-1.png" alt="shape" /></div>
+        <div className="widget-area">
+          <div className="container">
+            <div className="row justify-content-between">
+              <div className="col-md-3 col-xl-auto">
+                <div className="widget footer-widget">
+                  <h3 className="widget_title">Help Desk</h3>
+                  <div className="vs-widget-about">
+                    <a href="tel:+61 412783132" className="footer-number1">+61 412783132</a>
+                    <p className="footer-address2"><i className="fal fa-map-marker-alt" />Unit 1/9 Boag Rd, Morley WA 6062</p>
+                    <a href="mailto:ebizco.au@gmail.com" className="footer-mail1"><i className="fal fa-envelope" />ebizco.au@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 col-xl-auto">
+                <div className="widget widget_nav_menu footer-widget">
+                  <h3 className="widget_title">Useful Links</h3>
+                  <div className="menu-all-pages-container">
+                    <ul className="menu">
+                      <li><Link href="/about">Our Compnay</Link></li>
+                      <li><Link href="/about">About Us</Link></li>
+                      <li><Link href="/blog">Latest News</Link></li>
+                      <li><Link href="/contact">Contact Us</Link></li>
+                      <li><Link href="/privacy">Privacy Policy</Link></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-4 col-xl-auto">
+                <div className="widget footer-widget">
+                  <h3 className="widget_title">About Us</h3>
+                  <div className="vs-widget-about">
+                    <p className="footer-text">eBizco Australia Pty Ltd — Canberra-based software development company since 1998. Specialists in AI IVR, intelligent automation, and SaaS platform development. We build decentralised, self-hosted solutions that give businesses complete control over their data and their customers. Home of the Sovereign Lock Platform — the future of hospitality self-check-in.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="copyright-wrap">
+            <div className="row gy-2 align-items-center justify-content-between">
+              <div className="col-auto d-none d-lg-block">
+                <div className="copyright-logo"><Link href="/"><img src="/assets/img/icon/logowhite.png" alt="Logo" /></Link></div>
+              </div>
+              <div className="col-auto">
+                <p className="copyright-text">Copyright <i className="fal fa-copyright" /> 2023 <Link className="text-white" href="/">eBizCo</Link></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a href="#" className="scrollToTop scroll-btn"><i className="far fa-arrow-up" /></a>
+    </>
+  );
+}

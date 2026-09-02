@@ -1,0 +1,116 @@
+/* Simplified mobile nav (replaces the jQuery height-animation from the original theme) */
+@media only screen and (max-width: 992px) {
+  header#antifake-header #mainmenu {
+    display: none;
+  }
+  header#antifake-header.menu-open {
+    height: auto;
+    padding-bottom: 20px;
+    background: #111111;
+  }
+  header#antifake-header.menu-open #mainmenu {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  header#antifake-header.menu-open #mainmenu ul {
+    height: auto;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  header#antifake-header.menu-open #mainmenu li {
+    float: none;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  header#antifake-header.menu-open #mainmenu a {
+    display: block;
+    color: #fff;
+    padding: 14px 4px;
+  }
+}
+
+/* Testimonial carousel (replaces owl.carousel) */
+.af-testi-track {
+  display: flex;
+  overflow: hidden;
+}
+
+.af-testi-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  transition: none;
+}
+
+.af-testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.af-testi-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(129, 103, 230, 0.25);
+  cursor: pointer;
+  padding: 0;
+}
+
+.af-testi-dot.is-active {
+  background: var(--primary-color, #8167e6);
+}
+
+/* Pricing toggle switch (replaces jquery switch plugin) */
+.af-switch-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.af-switch-set button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.af-switch-set button.is-active {
+  opacity: 1;
+  color: var(--primary-color, #8167e6);
+}
+
+.af-switch-track {
+  width: 46px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e6e1fa;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.af-switch-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-color, #8167e6);
+  transition: transform 0.2s ease;
+}
+
+.af-switch-track.is-yearly .af-switch-thumb {
+  transform: translateX(22px);
+}
