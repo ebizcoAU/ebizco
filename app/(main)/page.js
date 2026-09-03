@@ -75,39 +75,6 @@ const products = [
   },
 ];
 
-const events = [
-  {
-    id: "motocare",
-    day: "24",
-    month: "Aug 2023",
-    title: "Partnership with Motocare",
-    sub: "Open Office in Ho Chi Minh City",
-    hosts: [
-      { name: "Dong Nguyen", role: "Marketing Manager", img: "/assets/img/team/dong.png" },
-      { name: "Vince Phan", role: "Software Manager", img: "/assets/img/team/vince.png" },
-    ],
-  },
-  {
-    id: "antifake-launch",
-    day: "5",
-    month: "Oct 2023",
-    title: "Launching AntiFake in Vietnam",
-    sub: "Online Product Authentication",
-    hosts: [
-      { name: "Dong Nguyen", role: "Marketing Manager", img: "/assets/img/team/dong.png" },
-      { name: "Vince Phan", role: "Software Manager", img: "/assets/img/team/vince.png" },
-    ],
-  },
-  {
-    id: "consultancy",
-    day: "21",
-    month: "Oct 2022",
-    title: "Information Consultancy",
-    sub: "Online Topic, Business",
-    hosts: [{ name: "Vince Phan", role: "Consultant", img: "/assets/img/team/vince.png" }],
-  },
-];
-
 const testimonials = [
   {
     name: "Mr Cheng Williams",
@@ -298,42 +265,6 @@ export default function HomePage() {
                 Learn More About Us<i className="fal fa-long-arrow-right" />
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- Events ---------- */}
-      <section className="hp-band">
-        <div className="hp-container">
-          <div className="hp-section-head">
-            <span className="hp-eyebrow"><i className="fal fa-arrow-right" />Business Event</span>
-            <h2 className="hp-title">Join Our Event</h2>
-          </div>
-          <div className="hp-events">
-            {events.map((ev) => (
-              <div className="hp-event" key={ev.id}>
-                <div className="hp-event-date">
-                  <span className="day">{ev.day}</span>
-                  <span className="rest">{ev.month}</span>
-                </div>
-                <div>
-                  <h3 className="hp-event-title"><Link href="/blog-details">{ev.title}</Link></h3>
-                  <p className="hp-event-sub">{ev.sub}</p>
-                  <div className="hp-event-hosts">
-                    {ev.hosts.map((h) => (
-                      <div className="hp-host" key={h.name}>
-                        <img src={h.img} alt={h.name} />
-                        <div>
-                          <div className="hp-host-name">{h.name}</div>
-                          <div className="hp-host-role">{h.role}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <Link href="/contact" className="hp-event-join">Ask to Join<i className="far fa-arrow-right" /></Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
