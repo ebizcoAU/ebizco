@@ -1,3 +1,10 @@
+/* The theme's style.css sets `body { display: none; }` and relies on the
+   original template's JS to reveal it once assets finish loading (avoids a
+   flash of unstyled content). That JS was never ported, so force it visible. */
+body {
+  display: block !important;
+}
+
 /* Simplified mobile nav (replaces the jQuery height-animation from the original theme) */
 @media only screen and (max-width: 992px) {
   header#antifake-header #mainmenu {
