@@ -23,9 +23,11 @@ export default function AntifakeHeader() {
               <div className="de-flex-col header-col-mid">
                 <ul id="mainmenu">
                   <li><Link href="/antifake" onClick={() => setOpen(false)}>Home<span></span></Link></li>
-                  <li><Link href="/antifake#features" onClick={() => setOpen(false)}>Features<span></span></Link></li>
+                  <li><Link href="/antifake/about" onClick={() => setOpen(false)}>About<span></span></Link></li>
+                  <li><Link href="/antifake/features" onClick={() => setOpen(false)}>Features<span></span></Link></li>
                   <li><Link href="/antifake#pricing" onClick={() => setOpen(false)}>Pricing<span></span></Link></li>
-                  <li><Link href="/contact" onClick={() => setOpen(false)}>Contact +61 412783132<span></span></Link></li>
+                  <li><Link href="/antifake/jobs" onClick={() => setOpen(false)}>Jobs<span></span></Link></li>
+                  <li><Link href="/antifake/contact" onClick={() => setOpen(false)}>Contact +61 412783132<span></span></Link></li>
                 </ul>
               </div>
               <div className="de-flex-col">

@@ -15,8 +15,9 @@ export default function AntifakeFooter() {
             <div className="widget">
               <h5>Company</h5>
               <ul>
-                <li><Link className="a-underline" href="/about">About eBizCo<span></span></Link></li>
-                <li><Link className="a-underline" href="/contact">Contact Us<span></span></Link></li>
+                <li><Link className="a-underline" href="/antifake/about">About AntiFake<span></span></Link></li>
+                <li><Link className="a-underline" href="/antifake/jobs">Job Opportunities<span></span></Link></li>
+                <li><Link className="a-underline" href="/antifake/contact">Contact Us<span></span></Link></li>
               </ul>
             </div>
           </div>
@@ -25,7 +26,7 @@ export default function AntifakeFooter() {
             <div className="widget">
               <h5>Products</h5>
               <ul>
-                <li><Link className="a-underline" href="/antifake#features">Features<span></span></Link></li>
+                <li><Link className="a-underline" href="/antifake/features">Features<span></span></Link></li>
                 <li><Link className="a-underline" href="/antifake#pricing">Service Plan<span></span></Link></li>
               </ul>
             </div>

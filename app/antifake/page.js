@@ -311,7 +311,7 @@ export default function AntifakePage() {
               </p>
               <div className="spacer-20" />
               <Link className="btn-custom px-4" href="#features" style={{ fontSize: 10 }}>Learn more</Link>{" "}
-              <Link className="btn-border px-3" href="/contact" style={{ fontSize: 10 }}>Register</Link>
+              <Link className="btn-border px-3" href="/antifake/contact" style={{ fontSize: 10 }}>Register</Link>
             </div>
             <div className="col-lg-6 offset-lg-1 text-center">
               <img src="/antifake/assets/img/misc/p1.png" className="img-fluid" alt="AntiFake product verification app" />
@@ -378,7 +378,7 @@ export default function AntifakePage() {
               </div>
               <div className="spacer-half" />
               <Link className="btn-custom px-4" href="#features" style={{ fontSize: 10 }}>Learn more</Link>{" "}
-              <Link className="btn-border px-3" href="/contact" style={{ fontSize: 10 }}>Register</Link>
+              <Link className="btn-border px-3" href="/antifake/contact" style={{ fontSize: 10 }}>Register</Link>
             </div>
           </div>
         </div>
@@ -441,7 +441,7 @@ export default function AntifakePage() {
                   </div>
 
                   <div className="action">
-                    <Link href="/contact" className="btn-custom">Register</Link>
+                    <Link href="/antifake/contact" className="btn-custom">Register</Link>
                   </div>
                 </div>
               </div>
