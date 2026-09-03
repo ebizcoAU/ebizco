@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Header() {
+  const translateToVietnamese = (e) => {
+    e.preventDefault();
+    const target = `https://translate.google.com/translate?sl=auto&tl=vi&u=${encodeURIComponent(window.location.href)}`;
+    window.open(target, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
       <div className="preloader">
@@ -83,7 +91,7 @@ export default function Header() {
                 <div className="header-dropdown style-white">
                   <a className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false"><i className="fas fa-globe" />English</a>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink1">
-                    <li><a href="#">Vietnamese</a></li>
+                    <li><a href="#" onClick={translateToVietnamese}>Vietnamese</a></li>
                   </ul>
                 </div>
               </div>
