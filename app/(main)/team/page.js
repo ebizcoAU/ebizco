@@ -124,7 +124,7 @@ export default function TeamPage() {
     </div>
   </div>
 </section>
-<section className="space-top space-extra-bottom" data-bg-src="/assets/img/bg/skill-bg-2-1.jpg">
+<section className="space-top space-extra-bottom skill-dark-bg" data-bg-src="/assets/img/bg/skill-bg-2-1.jpg">
   <div className="container">
     <div className="row flex-row-reverse">
       <div className="col-lg-5 col-xxl-auto mb-30 pb-20 pb-lg-0 wow fadeInUp" data-wow-delay="0.2s"><img src="/assets/img/skill/skill-1-1.jpg" alt="Skill image" /></div>

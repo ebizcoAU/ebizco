@@ -6,3 +6,18 @@
 .footer-layout4 .footer-widget .footer-text {
   max-width: none;
 }
+
+/* The "Company Skill" section on the Team page sits on a dark navy photo
+   background (skill-bg-2-1.jpg), but its heading/paragraph/progress-bar
+   labels use the theme's default dark text colors (--title-color: #1A1A1A,
+   --body-color: #878D97), which are unreadable against it. Override both
+   variables locally so the heading, paragraph and progress-box labels
+   (which all read from them) become legible again. */
+.skill-dark-bg {
+  --title-color: #ffffff;
+  --body-color: #cfd8f0;
+}
+
+.skill-dark-bg .sec-subtitle {
+  color: #8fb4ff;
+}
