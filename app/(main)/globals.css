@@ -1,1 +1,8 @@
 /* Styling is provided by /assets/css/app.min.css, fontawesome.min.css and style.css (loaded in app/layout.js). */
+
+/* style.css caps `.footer-text` at 285px regardless of its column width.
+   The footer About Us widget now spans half the row (col-md-6), so let its
+   text use the full column instead of staying pinned to that fixed cap. */
+.footer-layout4 .footer-widget .footer-text {
+  max-width: none;
+}
