@@ -10,7 +10,7 @@ export const metadata = {
 export default function IcutvPage() {
   return (
     <>
-      <div className="breadcumb-wrapper" data-bg-src="/assets/img/blog/breadcumb-bg.jpg">
+      <div className="breadcumb-wrapper" data-bg-src="/assets/img/bg/breadcumb-bg.jpg">
         <div className="container z-index-common">
           <div className="breadcumb-content">
             <h1 className="breadcumb-title">Maximize ROI with Addressable TV: Cost-effective, Targeted, Budget-controlled Advertising.</h1>

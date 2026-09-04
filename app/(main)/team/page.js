@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function TeamPage() {
   return (
     <>
-<div className="breadcumb-wrapper" data-bg-src="/assets/img/breadcumb/breadcumb-bg.jpg">
+<div className="breadcumb-wrapper" data-bg-src="/assets/img/breadcrumb/breadcumb-bg.jpg">
   <div className="container z-index-common">
     <div className="breadcumb-content">
       <h1 className="breadcumb-title">Team</h1>
