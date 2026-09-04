@@ -23,6 +23,7 @@ export default function Header() {
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/team">Team</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/privacy">Privacy Statement</Link></li>
               <li><Link href="/contact">Contact Us</Link></li>
@@ -118,6 +119,7 @@ export default function Header() {
                       <ul>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/about">About Us</Link></li>
+                        <li><Link href="/team">Team</Link></li>
                         <li><Link href="/blog">Blog</Link></li>
                         <li><Link href="/privacy">Privacy Statement</Link></li>
                         <li><Link href="/contact">Contact Us</Link></li>

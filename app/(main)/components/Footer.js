@@ -23,8 +23,8 @@ export default function Footer() {
                   <h3 className="widget_title">Useful Links</h3>
                   <div className="menu-all-pages-container">
                     <ul className="menu">
-                      <li><Link href="/about">Our Compnay</Link></li>
                       <li><Link href="/about">About Us</Link></li>
+                      <li><Link href="/team">Our Team</Link></li>
                       <li><Link href="/blog">Latest News</Link></li>
                       <li><Link href="/contact">Contact Us</Link></li>
                       <li><Link href="/privacy">Privacy Policy</Link></li>
