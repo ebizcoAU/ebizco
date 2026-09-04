@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="widget-area">
           <div className="container">
             <div className="row justify-content-between">
-              <div className="col-md-3 col-xl-auto">
+              <div className="col-md-3">
                 <div className="widget footer-widget">
                   <h3 className="widget_title">Help Desk</h3>
                   <div className="vs-widget-about">
@@ -18,7 +18,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 col-xl-auto">
+              <div className="col-md-3">
                 <div className="widget widget_nav_menu footer-widget">
                   <h3 className="widget_title">Useful Links</h3>
                   <div className="menu-all-pages-container">
@@ -32,11 +32,11 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-4 col-xl-auto">
+              <div className="col-md-6">
                 <div className="widget footer-widget">
                   <h3 className="widget_title">About Us</h3>
                   <div className="vs-widget-about">
-                    <p className="footer-text">eBizco Australia Pty Ltd — Canberra-based software development company since 1998. Specialists in AI IVR, intelligent automation, and SaaS platform development. We build decentralised, self-hosted solutions that give businesses complete control over their data and their customers. Home of the Sovereign Lock Platform — the future of hospitality self-check-in.</p>
+                    <p className="footer-text">eBizco Australia Pty Ltd — Canberra-based software development company since 1998. Specialists in AI IVR, intelligent automation, and SaaS platform development. Beyond software, we design our own hardware and research mechatronics and robotics for the mining industry. We build decentralised, self-hosted solutions that give businesses complete control over their data and their customers. Home of the Sovereign Lock Platform — the future of hospitality self-check-in.</p>
                   </div>
                 </div>
               </div>
