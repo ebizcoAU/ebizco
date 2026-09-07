@@ -32,10 +32,10 @@ const heroSlides = [
   },
   {
     id: "icutv",
-    subtitle: "Addressable TV Advertising — ICUTV",
-    title: "Ads That Find The Right Screen.",
-    text: "ICUTV delivers targeted, addressable television advertising — so you only pay for the audience that actually sees your ad.",
-    image: "/assets/img/others/hero-icutv-addressable-tv.png",
+    subtitle: "Pay-Per-Play Digital Signage — ICUTV",
+    title: "Play Anywhere. Pay Per Play.",
+    text: "ICUTV is a pay-as-you-go digital signage network — manage every screen from the cloud and only pay for the plays that actually air.",
+    image: "/assets/img/icutv/icutv-playanywhere.png",
     primaryCta: { label: "Explore ICUTV", href: PRODUCTS.icutv.href, external: PRODUCTS.icutv.external },
   },
 ];
@@ -52,10 +52,10 @@ const products = [
   {
     id: "icutv",
     icon: "fal fa-tv",
-    title: "ICUTV - TV Ads",
+    title: "ICUTV - Digital Signage",
     href: PRODUCTS.icutv.href,
     external: PRODUCTS.icutv.external,
-    text: "An addressable TV system offers targeted advertising, ensuring you pay for the specific audience you reach. Say goodbye to wasted ad spend and embrace efficient, data-driven campaigns that deliver maximum impact for your investment.",
+    text: "A pay-per-play digital signage network: build your content once, deploy it to any screen — from airports to taxis — and track every play in real time. No hardware lock-in, no wasted airtime.",
   },
   {
     id: "antifake",

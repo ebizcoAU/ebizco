@@ -2,10 +2,76 @@ import Link from "next/link";
 import { PRODUCTS, externalLinkProps } from "@/lib/products";
 
 export const metadata = {
-  title: "ICUTV — Addressable TV Advertising | eBizCo",
+  title: "ICUTV — Digital Signage, Pay As You Go | eBizCo",
   description:
-    "Maximize ROI with Addressable TV: cost-effective, targeted, budget-controlled advertising from eBizCo's ICUTV platform.",
+    "ICUTV is a pay-per-play digital signage network — manage screens from any device, track every play in real time, and only pay for what actually airs.",
 };
+
+const usps = [
+  "Deploy and run on any devices.",
+  "Pay per play, per TV — from $0.005.",
+  "Fast connect and distribute in a timely manner.",
+  "Real-time viewer statistics.",
+];
+
+const platforms = [
+  { icon: "/assets/img/icutv/icutv-os-windows.png", label: "Windows" },
+  { icon: "/assets/img/icutv/icutv-os-macos.png", label: "macOS" },
+  { icon: "/assets/img/icutv/icutv-os-raspberrypi.png", label: "Raspbian" },
+  { icon: "/assets/img/icutv/icutv-os-ubuntu.png", label: "Ubuntu" },
+  { icon: "/assets/img/icutv/icutv-os-browser.png", label: "Web" },
+  { icon: "/assets/img/icutv/icutv-os-android.png", label: "Android" },
+];
+
+const apps = [
+  {
+    icon: "fal fa-sitemap",
+    title: "ICUAdmin",
+    text: "The online back-office that manages every screen's content, grouping, and cost-per-play from one map-based dashboard.",
+  },
+  {
+    icon: "fal fa-mobile",
+    title: "ICURemote",
+    text: "A mobile app for uploading content and setting playback schedules on the go, wherever your screens are.",
+  },
+  {
+    icon: "fal fa-tv",
+    title: "ICUTV Player",
+    text: "The lightweight player app installed on a set-top box or smart TV that actually plays your content.",
+  },
+];
+
+const showcase = [
+  {
+    img: "/assets/img/icutv/icutv-screen-grouping.png",
+    title: "Grouping TV",
+    text: "Organize screens by location on a live map and set a cost-per-play for each group.",
+  },
+  {
+    img: "/assets/img/icutv/icutv-monitor-screens.png",
+    title: "Monitoring TV",
+    text: "See every screen's online/offline status and location at a glance, in real time.",
+  },
+  {
+    img: "/assets/img/icutv/icutv-ads-asset-workflow.png",
+    title: "Loading TV",
+    text: "Upload, review and approve ad creative through a built-in registration and moderation workflow.",
+  },
+  {
+    img: "/assets/img/icutv/icutv-analytics-dashboard.png",
+    title: "Statistic TV",
+    text: "Track total plays, viewers and transactions across your whole network, month by month.",
+  },
+];
+
+const network = [
+  { img: "/assets/img/icutv/icutv-network-airport.png", label: "Airport TV" },
+  { img: "/assets/img/icutv/icutv-network-shopping.png", label: "Shopping Centre TV" },
+  { img: "/assets/img/icutv/icutv-network-bus.png", label: "Bus TV" },
+  { img: "/assets/img/icutv/icutv-network-train.png", label: "Train TV" },
+  { img: "/assets/img/icutv/icutv-network-taxi.png", label: "Taxi TV" },
+  { img: "/assets/img/icutv/icutv-network-wearable.png", label: "Wearable TV" },
+];
 
 export default function IcutvPage() {
   return (
@@ -13,7 +79,7 @@ export default function IcutvPage() {
       <div className="breadcumb-wrapper" data-bg-src="/assets/img/bg/breadcumb-bg.jpg">
         <div className="container z-index-common">
           <div className="breadcumb-content">
-            <h1 className="breadcumb-title">Maximize ROI with Addressable TV: Cost-effective, Targeted, Budget-controlled Advertising.</h1>
+            <h1 className="breadcumb-title">ICUTV — Digital Signage, Pay As You Go</h1>
             <div className="breadcumb-menu-wrap">
               <ul className="breadcumb-menu">
                 <li><Link href="/">Home</Link></li>
@@ -23,50 +89,169 @@ export default function IcutvPage() {
           </div>
         </div>
       </div>
-      <section className="vs-blog-wrapper blog-details space-top space-extra-bottom">
+
+      <section className="space-top space-extra-bottom">
         <div className="container">
-          <div className="row gx-40">
-            <div className="col-lg-8">
-              <div className="vs-blog blog-single">
-                <div className="blog-img"><img src="/assets/img/blog/icutv2.png" alt="ICUTV addressable TV advertising" /></div>
-                <div className="blog-content">
-                  <div className="blog-meta"><span><i className="far fa-calendar" />ICUTV</span> <span><i className="fal fa-user" />eBizCo Australia</span></div>
-                  <h2 className="blog-title">ICUTV — Efficiently reach your ideal audience, trim costs, and maximize impact with Addressable TV</h2>
-                  <p>Addressable TV advertising offers a paradigm shift in the world of marketing, providing a plethora of advantages that traditional television advertising simply cannot match. This revolutionary approach allows advertisers to tailor their messages to specific households, resulting in a more efficient and effective campaign strategy.</p>
-                  <p>First and foremost, the economic benefits of addressable TV are undeniable. Advertisers can save substantial amounts of money by reaching only the intended audience. Unlike traditional TV ads that are broadcasted to a wide and diverse audience, addressable TV ensures that resources are allocated to those who are most likely to respond positively to the message. This precise targeting translates to reduced wastage of ad impressions and ultimately leads to cost savings.</p>
-                  <p>Control over budget allocation is another key advantage. Addressable TV allows advertisers to set a fixed budget and optimize it for maximum impact. Advertisers can identify high-performing segments and allocate more budget to those, while scaling back in areas that show lower engagement. This dynamic budget management ensures that every dollar spent is channeled towards generating the best possible return on investment.</p>
-                  <p>Direct target choice is perhaps the most compelling feature of addressable TV advertising. Advertisers can select specific demographics, interests, and behaviors to create tailored campaigns. This level of personalization fosters a deeper connection with the audience, increasing the likelihood of engagement and conversions. Whether it&apos;s reaching young adults interested in fitness or households with children, addressable TV ensures that the right message reaches the right people at the right time.</p>
-                  <div className="row mt-30">
-                    <div className="col-md-6 mb-30"><img src="/assets/img/blog/icutv3.png" alt="ICUTV platform" /></div>
-                    <div className="col-md-6 mb-30"><img src="/assets/img/blog/icutv4.png" alt="ICUTV platform" /></div>
-                  </div>
-                  <p>In conclusion, addressable TV advertising brings a host of advantages that empower advertisers to maximize their impact. By saving money through precise targeting, managing budgets effectively, and offering direct control over target demographics, this approach transforms advertising into a highly efficient and responsive endeavor. As technology continues to evolve, addressable TV stands at the forefront of a new era in marketing — one that offers unparalleled customization and measurable results.</p>
+          <div className="row align-items-center">
+            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <span className="sec-subtitle">Digital Signage — ICUTV</span>
+              <h2 className="sec-title3 h1">A simple, pay-as-you-go TV advertising network.</h2>
+              <p className="mb-4">
+                Build your content once, push it to the cloud, and play it on any screen — from airport
+                baggage claims to taxi headrests — without buying new hardware or locking into a broadcast contract.
+              </p>
+              <ul className="list-unstyled mb-4">
+                {usps.map((item) => (
+                  <li key={item} className="mb-2">
+                    <i className="far fa-check-circle text-theme me-2" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://icumedia.com.au:9002" className="vs-btn" target="_blank" rel="noopener noreferrer">
+                Start Free Trial<i className="far fa-arrow-right" />
+              </a>{" "}
+              <a href="#how-it-works" className="vs-btn style3">
+                See How It Works<i className="far fa-long-arrow-right" />
+              </a>
+            </div>
+            <div className="col-lg-6 text-center wow fadeInUp" data-wow-delay="0.2s">
+              <img src="/assets/img/icutv/icutv-playanywhere.png" className="img-fluid" alt="Build once, save to the cloud, play on any device" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-extra-bottom">
+        <div className="container">
+          <div className="row justify-content-center text-center mb-4">
+            <div className="col-xl-6">
+              <span className="sec-subtitle">Runs Anywhere</span>
+              <h3 className="sec-title3 h4">Deploy on the hardware you already have</h3>
+            </div>
+          </div>
+          <div className="row text-center justify-content-center">
+            {platforms.map((p) => (
+              <div className="col-4 col-sm-3 col-md-2 mb-4" key={p.label}>
+                <div className="icutv-platform-badge">
+                  <img src={p.icon} alt={p.label} />
                 </div>
-                <div className="blog-author">
-                  <div className="media-img"><img src="/assets/img/blog/vincep1.jpg" alt="Author" /></div>
-                  <div className="media-body">
-                    <h3 className="author-name h4">Vince Phan</h3>
-                    <p className="author-degi">Author</p>
-                    <p className="author-text">Addressable TV advertising offers cost savings by targeting specific audiences, enabling controlled budgets and precise targeting. Advertisers can tailor messages to their desired demographics, maximizing engagement and efficiency.</p>
+                <div className="mt-2">{p.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="space-extra-bottom">
+        <div className="container">
+          <div className="row justify-content-center text-center mb-4">
+            <div className="col-xl-6">
+              <span className="sec-subtitle">How It Works</span>
+              <h3 className="sec-title3 h1">Three apps, one content pipeline</h3>
+            </div>
+          </div>
+          <div className="row">
+            {apps.map((app) => (
+              <div className="col-md-4" key={app.title}>
+                <div className="feature-style2 text-center">
+                  <div className="feature-icon icutv-feature-icon">
+                    <i className={app.icon} />
                   </div>
+                  <h4 className="feature-title h5">{app.title}</h4>
+                  <p className="feature-text">{app.text}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="space-extra-bottom">
+        <div className="container">
+          <div className="row justify-content-center text-center mb-4">
+            <div className="col-xl-7">
+              <span className="sec-subtitle">See It In Action</span>
+              <h3 className="sec-title3 h1">Real screens, real-time control</h3>
+              <p className="mb-0">
+                A live ICUTV network today: <strong>1,128,067+</strong> ads played and counting, all tracked
+                automatically from the moment content goes live.
+              </p>
             </div>
-            <div className="col-lg-4">
-              <aside className="sidebar-area">
-                <div className="widget widget_search">
-                  <form className="search-form"><input type="text" placeholder="Search Here" /> <button type="submit"><i className="far fa-search" /></button></form>
-                </div>
-                <div className="widget widget_categories">
-                  <h3 className="widget_title">Our Products</h3>
-                  <ul>
-                    <li><Link href={PRODUCTS.ozlodge.href}>{PRODUCTS.ozlodge.name} — {PRODUCTS.ozlodge.tagline}</Link></li>
-                    <li><Link href={PRODUCTS.icutv.href}>{PRODUCTS.icutv.name} — {PRODUCTS.icutv.tagline}</Link></li>
-                    <li><Link href={PRODUCTS.antifake.href} {...externalLinkProps(PRODUCTS.antifake)}>{PRODUCTS.antifake.name} — {PRODUCTS.antifake.tagline}</Link></li>
-                    <li><Link href={PRODUCTS.projman.href} {...externalLinkProps(PRODUCTS.projman)}>{PRODUCTS.projman.name} — {PRODUCTS.projman.tagline}</Link></li>
-                  </ul>
-                </div>
-              </aside>
+          </div>
+          <div className="row">
+            {showcase.map((item) => (
+              <div className="col-md-6 mb-30" key={item.title}>
+                <img src={item.img} className="img-fluid rounded" alt={item.title} />
+                <h5 className="mt-3 mb-1">{item.title}</h5>
+                <p className="mb-0">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="space-extra-bottom">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-3">
+              <h3 className="sec-title3 h4">TV Network</h3>
+            </div>
+            <div className="col-lg-9">
+              <p>
+                Our TV network spans fixed and mobile screens: fixed points at bus stops, light rail stations,
+                airports, hospitals and shopping centres, plus mobile screens riding in taxis and on wearable
+                displays.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            {network.map((n) => (
+              <div className="col-lg-4 col-sm-6 mb-30" key={n.label}>
+                <img src={n.img} className="img-fluid rounded" alt={n.label} />
+                <h5 className="mt-2 text-center">{n.label}</h5>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-style1 z-index-common">
+        <div className="container">
+          <div className="row justify-content-center text-center">
+            <div className="col-xl-8">
+              <h2 className="h1" style={{ color: "var(--white-color)" }}>Pay per play, per TV — from $0.005</h2>
+              <p style={{ color: "var(--white-color)" }} className="mb-2">
+                Use your own TV screens for free, or lease ours.
+              </p>
+              <p style={{ color: "var(--white-color)" }} className="mb-4">
+                Get a free 3-month trial — start with a single screen, then add more whenever you&apos;re ready.
+              </p>
+              <a href="https://icumedia.com.au:8002" className="vs-btn" style={{ backgroundColor: "var(--white-color)", color: "var(--theme-color)" }} target="_blank" rel="noopener noreferrer">
+                Try It Now<i className="far fa-arrow-right" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-top space-extra-bottom">
+        <div className="container">
+          <div className="row justify-content-center text-center mb-4">
+            <div className="col-xl-6">
+              <span className="sec-subtitle">Explore More</span>
+              <h3 className="sec-title3 h4">Other eBizCo products</h3>
+            </div>
+          </div>
+          <div className="row justify-content-center text-center">
+            <div className="col-md-4 mb-3">
+              <Link href={PRODUCTS.ozlodge.href} className="vs-btn style3 w-100">{PRODUCTS.ozlodge.name} — {PRODUCTS.ozlodge.tagline}</Link>
+            </div>
+            <div className="col-md-4 mb-3">
+              <Link href={PRODUCTS.antifake.href} {...externalLinkProps(PRODUCTS.antifake)} className="vs-btn style3 w-100">{PRODUCTS.antifake.name} — {PRODUCTS.antifake.tagline}</Link>
+            </div>
+            <div className="col-md-4 mb-3">
+              <Link href={PRODUCTS.projman.href} {...externalLinkProps(PRODUCTS.projman)} className="vs-btn style3 w-100">{PRODUCTS.projman.name} — {PRODUCTS.projman.tagline}</Link>
             </div>
           </div>
         </div>

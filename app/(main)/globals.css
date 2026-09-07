@@ -21,3 +21,30 @@
 .skill-dark-bg .sec-subtitle {
   color: #8fb4ff;
 }
+
+/* ICUTV page: small badge for the "runs on any device" platform icons,
+   and a themed icon color for the .feature-style2 cards (that component's
+   built-in hover-invert effect targets an <img>'s filter, but these icons
+   are Font Awesome glyphs, so color is swapped by hand instead). */
+.icutv-platform-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+
+.icutv-platform-badge img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.icutv-feature-icon i {
+  color: var(--theme-color);
+  font-size: 36px;
+  line-height: 90px;
+}
+
+.feature-style2:hover .icutv-feature-icon i {
+  color: var(--white-color);
+}
