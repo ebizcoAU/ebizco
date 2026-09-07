@@ -222,7 +222,7 @@ export default function HomePage() {
 
       {/* ---------- Products ---------- */}
       <section className="hp-band">
-        <div className="hp-container">
+        <div className="hp-container wow fadeInUp" data-wow-delay="0.1s">
           <div className="hp-section-head">
             <span className="hp-eyebrow"><i className="fal fa-arrow-right" />What We Build</span>
             <h2 className="hp-title">Four Platforms, One Engineering Team</h2>
@@ -248,7 +248,7 @@ export default function HomePage() {
 
       {/* ---------- About ---------- */}
       <section className="hp-band hp-band--smoke">
-        <div className="hp-container">
+        <div className="hp-container wow fadeInUp" data-wow-delay="0.1s">
           <div className="hp-about">
             <div className="hp-about-img">
               <img src="/assets/img/about/ab-8-1.jpg" alt="eBizCo team at work" />
@@ -271,7 +271,7 @@ export default function HomePage() {
 
       {/* ---------- Testimonials ---------- */}
       <section className="hp-band hp-band--navy">
-        <div className="hp-container">
+        <div className="hp-container wow fadeInUp" data-wow-delay="0.1s">
           <div className="hp-section-head">
             <span className="hp-eyebrow" style={{ color: "#8db0ff" }}><i className="fal fa-arrow-right" />Customer Testimonial</span>
             <h2 className="hp-title" style={{ color: "#fff" }}>What People&rsquo;s Say</h2>
@@ -298,7 +298,7 @@ export default function HomePage() {
 
       {/* ---------- Blog ---------- */}
       <section className="hp-band">
-        <div className="hp-container">
+        <div className="hp-container wow fadeInUp" data-wow-delay="0.1s">
           <div className="hp-section-head">
             <span className="hp-eyebrow"><i className="fal fa-arrow-right" />Blog &amp; News</span>
             <h2 className="hp-title">Get Latest Updates</h2>
@@ -324,7 +324,7 @@ export default function HomePage() {
 
       {/* ---------- Closing CTA ---------- */}
       <section className="hp-band--tight" style={{ paddingBottom: 100 }}>
-        <div className="hp-container">
+        <div className="hp-container wow fadeInUp" data-wow-delay="0.1s">
           <div className="hp-cta">
             <div>
               <h3 className="hp-cta-title">Ready to build with us?</h3>
