@@ -48,3 +48,12 @@
 .feature-style2:hover .icutv-feature-icon i {
   color: var(--white-color);
 }
+
+/* Team page photos are real staff photos of varying dimensions, unlike the
+   template's uniform stock placeholders — crop them all to the same fixed
+   box so the grid stays even regardless of each photo's original size. */
+.team-style1 .team-img img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+}
