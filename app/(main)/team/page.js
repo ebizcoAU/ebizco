@@ -1,4 +1,16 @@
 import Link from "next/link";
+
+const team = [
+  { name: "Vince Phan", roles: ["System Architect", "Director"], photo: "vincephan.jpg" },
+  { name: "Sandra Phan", roles: ["Legal and Commercial", "Lawyer"], photo: "sandraphan.jpg" },
+  { name: "Victor Phan", roles: ["Building & Construction", "Architect"], photo: "victorphan.jpg" },
+  { name: "Van Nguyen", roles: ["Accountant", "Company Accountant"], photo: "vannguyen.jpg" },
+  { name: "Dong Nguyen", roles: ["VN Marketing Manager", "eBizCo VN"], photo: "dongnguyen.jpg" },
+  { name: "Paul Hampton", roles: ["System Architect & Integrator"], photo: "paulhampton.jpg" },
+  { name: "Trinh Doan", roles: ["VN Marketing Manager", "eBizCo VN"], photo: "trinhdoan.jpg" },
+  { name: "Anthony George", roles: ["System Engineer", "Company Engineer"], photo: "anthonygeorge.jpg" },
+];
+
 export default function TeamPage() {
   return (
     <>
@@ -15,102 +27,22 @@ export default function TeamPage() {
     </div>
   </div>
 </div>
-<div className="container pt-4">
-  <div className="alert alert-warning">
-    Placeholder content: these team profiles are unedited template demo data (stock photos, invented names), not real eBizCo staff. Swap in real bios and photos before this page goes live.
-  </div>
-</div>
 <section className="space-top space-extra-bottom">
   <div className="container wow fadeInUp" data-wow-delay="0.2s">
     <div className="row">
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-1.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Peter Parker</a></h3>
-            <p className="team-degi">Cheif Expert</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-2.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">John Deo</a></h3>
-            <p className="team-degi">UI/UX Expert</p>
+      {team.map((member) => (
+        <div className="col-md-6 col-lg-4 col-xl-3" key={member.name}>
+          <div className="team-style1">
+            <div className="team-img"><img src={`/assets/img/team/${member.photo}`} alt={member.name} />
+              <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-linkedin" /></a></div>
+            </div>
+            <div className="team-content">
+              <h3 className="team-title">{member.name}</h3>
+              <p className="team-degi">{member.roles.join(" · ")}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-3.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Jerzzy Lamot</a></h3>
-            <p className="team-degi">Cheif Expert</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-4.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Daniel Matthew</a></h3>
-            <p className="team-degi">Cheif Expert</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-5.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Grayson Gabriel</a></h3>
-            <p className="team-degi">Head Manager</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-6.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Alexander Mason</a></h3>
-            <p className="team-degi">Founder &amp; CEO</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-7.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Maverick Cameron</a></h3>
-            <p className="team-degi">Pro Developer</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="team-style1">
-          <div className="team-img"><a href="#"><img src="/assets/img/team/t-1-8.jpg" alt="image" /></a>
-            <div className="team-social"><a href="#"><i className="fab fa-facebook-f" /></a> <a href="#"><i className="fab fa-twitter" /></a> <a href="#"><i className="fab fa-instagram" /></a> <a href="#"><i className="fab fa-behance" /></a> <a href="#"><i className="fab fa-youtube" /></a></div>
-          </div>
-          <div className="team-content">
-            <h3 className="team-title"><a className="text-inherit" href="#">Marian Widjya</a></h3>
-            <p className="team-degi">Lead Developer</p>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>
