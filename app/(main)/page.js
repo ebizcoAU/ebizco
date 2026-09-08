@@ -174,11 +174,12 @@ export default function HomePage() {
                   <Link
                     href={slide.primaryCta.href}
                     className="hp-btn hp-btn--solid"
+                    prefetch={false}
                     {...externalLinkProps(slide.primaryCta)}
                   >
                     {slide.primaryCta.label}<i className="far fa-arrow-right" />
                   </Link>
-                  <Link href="/contact" className="hp-btn hp-btn--ghost-light">
+                  <Link href="/contact" className="hp-btn hp-btn--ghost-light" prefetch={false}>
                     Get In Touch
                   </Link>
                 </div>
@@ -236,6 +237,7 @@ export default function HomePage() {
                 <Link
                   href={p.href}
                   className="hp-card-link"
+                  prefetch={false}
                   {...externalLinkProps(p)}
                 >
                   Learn More<i className="far fa-arrow-right" />
@@ -261,7 +263,7 @@ export default function HomePage() {
                 <li><i className="far fa-check" />Proven track record of successful projects.</li>
                 <li><i className="far fa-check" />Exceptional customer satisfaction and reviews.</li>
               </ul>
-              <Link href="/about" className="hp-btn hp-btn--outline">
+              <Link href="/about" className="hp-btn hp-btn--outline" prefetch={false}>
                 Learn More About Us<i className="fal fa-long-arrow-right" />
               </Link>
             </div>
@@ -306,7 +308,7 @@ export default function HomePage() {
           <div className="hp-grid-3">
             {blogPosts.map((b) => (
               <div className="hp-blog-card" key={b.id}>
-                <Link href={b.href} className="hp-blog-img" {...externalLinkProps(b)}>
+                <Link href={b.href} className="hp-blog-img" prefetch={false} {...externalLinkProps(b)}>
                   <img src={b.img} alt={b.title} />
                 </Link>
                 <div className="hp-blog-body">
@@ -314,7 +316,7 @@ export default function HomePage() {
                     <span><i className="far fa-folder" />{b.tag}</span>
                     <span><i className="fal fa-user" />Vince Phan</span>
                   </div>
-                  <h3 className="hp-blog-title"><Link href={b.href} {...externalLinkProps(b)}>{b.title}</Link></h3>
+                  <h3 className="hp-blog-title"><Link href={b.href} prefetch={false} {...externalLinkProps(b)}>{b.title}</Link></h3>
                 </div>
               </div>
             ))}
@@ -330,7 +332,7 @@ export default function HomePage() {
               <h3 className="hp-cta-title">Ready to build with us?</h3>
               <p className="hp-cta-text">Tell us what you&rsquo;re trying to ship — we&rsquo;ll tell you how fast we can get there.</p>
             </div>
-            <Link href="/contact" className="hp-btn hp-btn--ghost-light" style={{ borderColor: "#fff" }}>
+            <Link href="/contact" className="hp-btn hp-btn--ghost-light" style={{ borderColor: "#fff" }} prefetch={false}>
               Get In Touch<i className="far fa-arrow-right" />
             </Link>
           </div>

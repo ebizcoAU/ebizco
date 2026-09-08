@@ -23,11 +23,11 @@ export default function Footer() {
                   <h3 className="widget_title">Useful Links</h3>
                   <div className="menu-all-pages-container">
                     <ul className="menu">
-                      <li><Link href="/about">About Us</Link></li>
-                      <li><Link href="/team">Our Team</Link></li>
-                      <li><Link href="/blog">Latest News</Link></li>
-                      <li><Link href="/contact">Contact Us</Link></li>
-                      <li><Link href="/privacy">Privacy Policy</Link></li>
+                      <li><Link href="/about" prefetch={false}>About Us</Link></li>
+                      <li><Link href="/team" prefetch={false}>Our Team</Link></li>
+                      <li><Link href="/blog" prefetch={false}>Latest News</Link></li>
+                      <li><Link href="/contact" prefetch={false}>Contact Us</Link></li>
+                      <li><Link href="/privacy" prefetch={false}>Privacy Policy</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -47,10 +47,10 @@ export default function Footer() {
           <div className="copyright-wrap">
             <div className="row gy-2 align-items-center justify-content-between">
               <div className="col-auto d-none d-lg-block">
-                <div className="copyright-logo"><Link href="/"><img src="/assets/img/icon/logowhite.png" alt="Logo" /></Link></div>
+                <div className="copyright-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logowhite.png" alt="Logo" /></Link></div>
               </div>
               <div className="col-auto">
-                <p className="copyright-text">Copyright <i className="fal fa-copyright" /> 2023 <Link className="text-white" href="/">eBizCo</Link></p>
+                <p className="copyright-text">Copyright <i className="fal fa-copyright" /> 2023 <Link className="text-white" href="/" prefetch={false}>eBizCo</Link></p>
               </div>
             </div>
           </div>

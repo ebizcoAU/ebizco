@@ -18,15 +18,15 @@ export default function Header() {
       <div className="vs-menu-wrapper">
         <div className="vs-menu-area text-center">
           <button className="vs-menu-toggle"><i className="fal fa-times" /></button>
-          <div className="mobile-logo"><Link href="/"><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
+          <div className="mobile-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
           <div className="vs-mobile-menu">
             <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/team">Team</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/privacy">Privacy Statement</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li><Link href="/" prefetch={false}>Home</Link></li>
+              <li><Link href="/about" prefetch={false}>About Us</Link></li>
+              <li><Link href="/team" prefetch={false}>Team</Link></li>
+              <li><Link href="/blog" prefetch={false}>Blog</Link></li>
+              <li><Link href="/privacy" prefetch={false}>Privacy Statement</Link></li>
+              <li><Link href="/contact" prefetch={false}>Contact Us</Link></li>
             </ul>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Header() {
           <button className="closeButton sideMenuCls"><i className="far fa-times" /></button>
           <div className="widget">
             <div className="vs-widget-about">
-              <div className="footer-logo"><Link href="/"><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
+              <div className="footer-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
               <p className="footer-text">Intrinsicly evisculate emerging cutting edge scenarios redefine future-proof e-markets demand line</p>
               <div className="footer-social">
                 <a href="#"><i className="fab fa-facebook-f" /></a>{" "}
@@ -112,17 +112,17 @@ export default function Header() {
               <div className="container">
                 <div className="row align-items-center justify-content-between gx-40">
                   <div className="col-auto">
-                    <div className="header-logo"><Link href="/"><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
+                    <div className="header-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
                   </div>
                   <div className="col text-end text-xl-center">
                     <nav className="main-menu menu-style4 d-none d-lg-block">
                       <ul>
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/about">About Us</Link></li>
-                        <li><Link href="/team">Team</Link></li>
-                        <li><Link href="/blog">Blog</Link></li>
-                        <li><Link href="/privacy">Privacy Statement</Link></li>
-                        <li><Link href="/contact">Contact Us</Link></li>
+                        <li><Link href="/" prefetch={false}>Home</Link></li>
+                        <li><Link href="/about" prefetch={false}>About Us</Link></li>
+                        <li><Link href="/team" prefetch={false}>Team</Link></li>
+                        <li><Link href="/blog" prefetch={false}>Blog</Link></li>
+                        <li><Link href="/privacy" prefetch={false}>Privacy Statement</Link></li>
+                        <li><Link href="/contact" prefetch={false}>Contact Us</Link></li>
                       </ul>
                     </nav>
                     <button className="vs-menu-toggle d-inline-block d-lg-none"><i className="fal fa-bars" /></button>
@@ -137,7 +137,7 @@ export default function Header() {
                     </div>
                   </div>
                   <div className="col-auto d-none d-xl-block">
-                    <div className="header-btns"><Link href="/contact" className="vs-btn style7">Make Appointment<i className="far fa-arrow-right" /></Link></div>
+                    <div className="header-btns"><Link href="/contact" className="vs-btn style7" prefetch={false}>Make Appointment<i className="far fa-arrow-right" /></Link></div>
                   </div>
                 </div>
               </div>

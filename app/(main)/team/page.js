@@ -7,7 +7,7 @@ const team = [
   { name: "Van Nguyen", roles: ["Accountant", "Company Accountant"], photo: "vannguyen.jpg" },
   { name: "Dong Nguyen", roles: ["VN Marketing Manager", "eBizCo VN"], photo: "dongnguyen.jpg" },
   { name: "Paul Hampton", roles: ["System Architect & Integrator"], photo: "paulhampton.jpg" },
-  { name: "Trinh Doan", roles: ["VN Marketing Manager", "eBizCo VN"], photo: "trinhdoan.jpg" },
+  { name: "Trinh Doan", roles: ["AU Marketing Manager", "eBizCo AU"], photo: "trinhdoan.jpg" },
   { name: "Anthony George", roles: ["System Engineer", "Company Engineer"], photo: "anthonygeorge.jpg" },
 ];
 

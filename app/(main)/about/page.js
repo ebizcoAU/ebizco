@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="team-style2">
           <div className="team-img">
             <div className="team-shape1" />
-            <div className="team-shape2" /><a href="javascript:void();"><img src="/assets/img/team/paul.png" alt="image" /></a>
+            <div className="team-shape2" /><a href="javascript:void();"><img src="/assets/img/team/paulhampton.jpg" alt="image" /></a>
             <div className="team-social"><a href="https://www.linkedin.com/in/tbble/"><i className="fab fa-linkedin" /></a></div>
           </div>
           <div className="team-content">
