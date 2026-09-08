@@ -24,6 +24,6 @@ Open [http://localhost:5200](http://localhost:5200) with your browser to see the
 ```bash
 npm run dev     # start the dev server on port 5200
 npm run build   # production build
-npm run start   # run the production build on port 5200
+npm run start   # run the production build; reads PORT from the environment (defaults to 3000)
 npm run lint    # lint the project
 ```
