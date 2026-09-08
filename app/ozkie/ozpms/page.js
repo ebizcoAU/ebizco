@@ -203,6 +203,29 @@ export default function OzpmsPage() {
       <section className="ozkie-section">
         <div className="ozkie-container">
           <div className="ozkie-title-area">
+            <span className="ozkie-eyebrow">Pricing</span>
+            <h2>Priced for portfolio scale</h2>
+          </div>
+          <div className="ozkie-price-grid">
+            <div className="ozkie-tier">
+              <span className="ozkie-tier__tag">Per Doorlock</span>
+              <div className="ozkie-price__amount">$29</div>
+              <div className="ozkie-price__unit">per month, per doorlock</div>
+              <p className="ozkie-price__desc">Covers the lock software, credential lifecycle management and support for that door.</p>
+            </div>
+            <div className="ozkie-tier">
+              <span className="ozkie-tier__tag">Portfolio Server</span>
+              <div className="ozkie-price__amount">$2,000</div>
+              <div className="ozkie-price__unit">per year, per 100 doorlocks</div>
+              <p className="ozkie-price__desc">Your organisation&apos;s OZPMS cloud license, licensed in blocks of 100 doors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ozkie-section ozkie-section--alt">
+        <div className="ozkie-container">
+          <div className="ozkie-title-area">
             <span className="ozkie-eyebrow">Compliance</span>
             <h2>Australian jurisdiction, auditable by design</h2>
           </div>

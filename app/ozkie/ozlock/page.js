@@ -185,6 +185,25 @@ export default function OzlockPage() {
       <section className="ozkie-section ozkie-section--alt">
         <div className="ozkie-container">
           <div className="ozkie-title-area">
+            <span className="ozkie-eyebrow">Pricing</span>
+            <h2>Virtually free for residential use</h2>
+            <p>
+              There&apos;s no subscription, no per-door fee and no cloud fee for homeowners. You pay
+              once for the lock hardware itself — Economy or Premium — and it&apos;s yours to run.
+            </p>
+          </div>
+          <div className="ozkie-license-grid">
+            <div className="ozkie-license"><strong>$0</strong><span>Monthly subscription</span></div>
+            <div className="ozkie-license"><strong>$0</strong><span>Per-door fee</span></div>
+            <div className="ozkie-license"><strong>$0</strong><span>Cloud relay fee</span></div>
+            <div className="ozkie-license"><strong>One-Time</strong><span>Pay only for the lock hardware</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ozkie-section">
+        <div className="ozkie-container">
+          <div className="ozkie-title-area">
             <span className="ozkie-eyebrow">Licensing</span>
             <h2>Open by design, not just by promise</h2>
           </div>

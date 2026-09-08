@@ -864,3 +864,40 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.ozkie-price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ozkie-price-grid .ozkie-tier {
+  text-align: center;
+}
+
+.ozkie-price__amount {
+  font-family: var(--ozkie-font-heading);
+  color: var(--ozkie-primary);
+  font-size: 34px;
+  font-weight: 700;
+  margin: 4px 0 2px;
+}
+
+.ozkie-price__unit {
+  font-size: 13px;
+  color: var(--ozkie-text-soft);
+  margin-bottom: 14px;
+}
+
+.ozkie-price__desc {
+  font-size: 14.5px;
+  color: var(--ozkie-text-soft);
+}
+
+@media (max-width: 900px) {
+  .ozkie-price-grid {
+    grid-template-columns: 1fr;
+  }
+}

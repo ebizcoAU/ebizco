@@ -161,6 +161,35 @@ export default function OzlodgePage() {
       <section className="ozkie-section ozkie-section--alt">
         <div className="ozkie-container">
           <div className="ozkie-title-area">
+            <span className="ozkie-eyebrow">Pricing</span>
+            <h2>Pay per door, not per platform</h2>
+          </div>
+          <div className="ozkie-price-grid">
+            <div className="ozkie-tier">
+              <span className="ozkie-tier__tag">Per Doorlock</span>
+              <div className="ozkie-price__amount">$29</div>
+              <div className="ozkie-price__unit">per month, per doorlock</div>
+              <p className="ozkie-price__desc">Covers the lock software, credential management and support for that door.</p>
+            </div>
+            <div className="ozkie-tier">
+              <span className="ozkie-tier__tag">OTA Referral</span>
+              <div className="ozkie-price__amount">10%</div>
+              <div className="ozkie-price__unit">on bookings referred through OZLODGE</div>
+              <p className="ozkie-price__desc">Applies only to bookings made through the OZLODGE platform — not your existing OTA or direct bookings.</p>
+            </div>
+            <div className="ozkie-tier">
+              <span className="ozkie-tier__tag">Property Server</span>
+              <div className="ozkie-price__amount">$1,000</div>
+              <div className="ozkie-price__unit">per year, per 50 doorlocks</div>
+              <p className="ozkie-price__desc">Your on-premises ozlodgeserv license, licensed in blocks of 50 doors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ozkie-section">
+        <div className="ozkie-container">
+          <div className="ozkie-title-area">
             <span className="ozkie-eyebrow">Licensing</span>
             <h2>Open at every layer</h2>
           </div>
