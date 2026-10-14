@@ -5,7 +5,7 @@ const offices = [
     style: { backgroundColor: "#777" },
     address: "106/6 TX13, P. Thạnh Xuân, Q12, Ho Chi Minh City, Vietnam",
     phone: "+84 908 888 218",
-    email: "admin@antifake.vn",
+    email: "admin@antifake.au",
     whatsapp: "https://wa.me/84908888218",
   },
   {

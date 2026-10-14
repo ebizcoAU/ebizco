@@ -103,7 +103,7 @@ export default function ContactPage() {
                 <div className="contact-box__icon"><i className="fal fa-phone-alt" /></div>
                 <div className="media-body">
                   <h4 className="contact-box__label">Phone Number &amp; Email</h4>
-                  <p className="contact-box__info"><a href="tel:+84908888218">+(84) 908 888 218</a><a href="mailto:admin@antifake.vn">admin@antifake.vn</a></p>
+                  <p className="contact-box__info"><a href="tel:+84908888218">+(84) 908 888 218</a><a href="mailto:admin@antifake.au">admin@antifake.au</a></p>
                 </div>
               </div>
               <div className="contact-box__item">

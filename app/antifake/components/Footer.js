@@ -48,7 +48,7 @@ export default function AntifakeFooter() {
                 <li><span>WhatsApp|Zalo|Viber</span></li>
                 <li><span className="pe-0">+84 (0)908888218</span></li>
                 <li><span className="pe-0">+61 (0)412783132</span></li>
-                <li><span>Email:</span><span>admin@antifake.vn</span></li>
+                <li><span>Email:</span><span>admin@antifake.au</span></li>
               </ul>
             </div>
           </div>
