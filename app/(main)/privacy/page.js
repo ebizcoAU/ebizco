@@ -205,7 +205,7 @@ export default function PrivacyPage() {
         <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
         <div className="h3"><span className="sec-subtitle">Contact Us</span></div>
         <h4 />
-        <p>If you have any questions about this Privacy Policy, You can contact us Email: ebizco.au@gmail.com</p>
+        <p>If you have any questions about this Privacy Policy, You can contact us Email: vince.phan@ebizco.com.au</p>
       </div>
     </div>
   </div>

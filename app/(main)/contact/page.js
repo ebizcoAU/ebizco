@@ -34,7 +34,7 @@ export default function ContactPage() {
   <div className="container">
     <div className="nav contact-tab-menu" id="nav-contactTab" role="tablist">
       <button className="nav-link active" id="nav-AustraliaAddress-tab" data-bs-toggle="tab" data-bs-target="#nav-AustraliaAddress" type="button" role="tab" aria-controls="nav-AustraliaAddress" aria-selected="true">
-        <span className="btn-img"><img src="/assets/img/contact/contact-1-1.jpg" alt="contact" /></span><span className="btn-title">eBizCo, Australia</span><br /> <span className="btn-text">Unit 1/9 Boag Rd, Morley WA 6062&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span className="btn-img"><img src="/assets/img/contact/contact-1-1.jpg" alt="contact" /></span><span className="btn-title">Ebizco Australia Pty Ltd</span><br /> <span className="btn-text">29 Farrer Street, Braddon ACT 2612&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       </button> 
       <button className="nav-link" id="nav-VietnamAddress-tab" data-bs-toggle="tab" data-bs-target="#nav-VietnamAddress" type="button" role="tab" aria-controls="nav-VietnamAddress" aria-selected="false">
         <span className="btn-img"><img src="/assets/img/contact/contact-1-2.jpg" alt="contact" /></span><span className="btn-title">eBizCo, Vietnam </span><br /> <span className="btn-text">103 Thạnh Xuân, P Thạnh Xuân, Quận 12, HCM City</span>
@@ -51,14 +51,14 @@ export default function ContactPage() {
                 <div className="contact-box__icon"><i className="fal fa-phone-alt" /></div>
                 <div className="media-body">
                   <h4 className="contact-box__label">Phone Number &amp; Email</h4>
-                  <p className="contact-box__info"><a href="tel:+61 412783132">+(61) 412783132</a><a href="mailto:ebizco.au@gmail.com">ebizco.au@gmail.com</a></p>
+                  <p className="contact-box__info"><a href="tel:+61 412783132">+(61) 412783132</a><a href="mailto:vince.phan@ebizco.com.au">vince.phan@ebizco.com.au</a></p>
                 </div>
               </div>
               <div className="contact-box__item">
                 <div className="contact-box__icon"><i className="far fa-map-marker-alt" /></div>
                 <div className="media-body">
-                  <h4 className="contact-box__label">Our Office Address</h4>
-                  <p className="contact-box__info">Unit 1/9 Boag Rd, Morley WA 6062</p>
+                  <h4 className="contact-box__label">Our Office Addresses</h4>
+                  <p className="contact-box__info">Head office: 29 Farrer Street, Braddon ACT 2612<br />WA office: Unit 1/9 Boag Rd, Morley WA 6062</p>
                 </div>
               </div>
               <div className="contact-box__item">

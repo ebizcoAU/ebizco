@@ -256,7 +256,7 @@ export default function HomePage() {
               <img src="/assets/img/about/ab-8-1.jpg" alt="eBizCo team at work" />
             </div>
             <div>
-              <span className="hp-eyebrow"><i className="fal fa-arrow-right" />A highly recommended Company Awarded</span>
+              <span className="hp-eyebrow"><i className="fal fa-arrow-right" />Building software since 1998</span>
               <h2 className="hp-title">A Top-tier Software Company...</h2>
               <ul className="hp-checklist">
                 <li><i className="far fa-check" />Cutting-edge technology expertise.</li>

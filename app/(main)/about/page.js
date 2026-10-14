@@ -83,7 +83,7 @@ export default function AboutPage() {
     <div className="row flex-row-reverse align-items-center gx-70">
       <div className="col-lg-6 col-xl"><img src="/assets/img/about/ab-7-1.jpg" alt="about image" /></div>
       <div className="col-lg-6 col-xl-auto wow fadeInUp" data-wow-delay="0.2s">
-        <div className="about-box2"><span className="sec-subtitle"><i className="fas fa-bring-forward" />Get best It solution 2023</span>
+        <div className="about-box2"><span className="sec-subtitle"><i className="fas fa-bring-forward" />Software built in Australia since 1998</span>
           <h2 className="sec-title3 h1">Inspiring Cloud Tech Needs for Business</h2>
           <p>
             &quot;Inspiring Innovated Cloud Tech Needs for Business: Embrace the limitless possibilities of cloud technology as we propel your business forward. Our cutting-edge solutions harness the full potential of the cloud, offering seamless scalability, data security, and enhanced collaboration. Whether you seek efficient data management, advanced analytics, or streamlined workflows, our expert team will tailor solutions to suit your unique requirements. Embrace the future of business with confidence, as we optimize your operations, reduce costs, and drive innovation. Elevate your success with our inspiring cloud tech services and stay ahead in today&apos;s dynamic and competitive landscape.&quot;

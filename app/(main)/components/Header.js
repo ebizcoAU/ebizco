@@ -37,14 +37,7 @@ export default function Header() {
           <div className="widget">
             <div className="vs-widget-about">
               <div className="footer-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logo.png" alt="eBizCo" className="logo" /></Link></div>
-              <p className="footer-text">Intrinsicly evisculate emerging cutting edge scenarios redefine future-proof e-markets demand line</p>
-              <div className="footer-social">
-                <a href="#"><i className="fab fa-facebook-f" /></a>{" "}
-                <a href="#"><i className="fab fa-twitter" /></a>{" "}
-                <a href="#"><i className="fab fa-instagram" /></a>{" "}
-                <a href="#"><i className="fab fa-behance" /></a>{" "}
-                <a href="#"><i className="fab fa-youtube" /></a>
-              </div>
+              <p className="footer-text">Software for hospitality and small business: point of sale, AI voice assistants and self-hosted, privacy-first systems.</p>
             </div>
           </div>
           <div className="widget">
@@ -83,8 +76,8 @@ export default function Header() {
               <div className="col d-none d-md-block">
                 <div className="header-links style-white">
                   <ul>
-                    <li><i className="far fa-envelope" /><a href="mailto:ebizco.au@gmail.com">ebizco.au@gmail.com</a></li>
-                    <li><i className="far fa-map-marker-alt" />Unit 1/9 Boag Rd Morley WA 6062</li>
+                    <li><i className="far fa-envelope" /><a href="mailto:vince.phan@ebizco.com.au">vince.phan@ebizco.com.au</a></li>
+                    <li><i className="far fa-map-marker-alt" />29 Farrer Street, Braddon ACT 2612</li>
                   </ul>
                 </div>
               </div>

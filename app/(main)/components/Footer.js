@@ -13,8 +13,9 @@ export default function Footer() {
                   <h3 className="widget_title">Help Desk</h3>
                   <div className="vs-widget-about">
                     <a href="tel:+61 412783132" className="footer-number1">+61 412783132</a>
-                    <p className="footer-address2"><i className="fal fa-map-marker-alt" />Unit 1/9 Boag Rd, Morley WA 6062</p>
-                    <a href="mailto:ebizco.au@gmail.com" className="footer-mail1"><i className="fal fa-envelope" />ebizco.au@gmail.com</a>
+                    <p className="footer-address2"><i className="fal fa-map-marker-alt" />Head office: 29 Farrer Street, Braddon ACT 2612</p>
+                    <p className="footer-address2"><i className="fal fa-map-marker-alt" />WA office: Unit 1/9 Boag Rd, Morley WA 6062</p>
+                    <a href="mailto:vince.phan@ebizco.com.au" className="footer-mail1"><i className="fal fa-envelope" />vince.phan@ebizco.com.au</a>
                   </div>
                 </div>
               </div>
@@ -50,7 +51,7 @@ export default function Footer() {
                 <div className="copyright-logo"><Link href="/" prefetch={false}><img src="/assets/img/icon/logowhite.png" alt="Logo" /></Link></div>
               </div>
               <div className="col-auto">
-                <p className="copyright-text">Copyright <i className="fal fa-copyright" /> 2023 <Link className="text-white" href="/" prefetch={false}>eBizCo</Link></p>
+                <p className="copyright-text">Copyright <i className="fal fa-copyright" /> {new Date().getFullYear()} <Link className="text-white" href="/" prefetch={false}>Ebizco Australia Pty Ltd</Link> · ABN 44 091 466 858 · ACN 091 466 858</p>
               </div>
             </div>
           </div>
