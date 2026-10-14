@@ -29,6 +29,7 @@ export default function Footer() {
                       <li><Link href="/blog" prefetch={false}>Latest News</Link></li>
                       <li><Link href="/contact" prefetch={false}>Contact Us</Link></li>
                       <li><Link href="/privacy" prefetch={false}>Privacy Policy</Link></li>
+                      <li><Link href="/delete-account" prefetch={false}>Delete your account</Link></li>
                     </ul>
                   </div>
                 </div>
