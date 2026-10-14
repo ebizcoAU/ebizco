@@ -10,10 +10,9 @@ export const metadata = {
 // A value left as null shows a visible [TBC …] marker, so it can't ship unnoticed.
 const DELETE_EMAIL = "admin@ebizco.com.au"; // operator 2026-10-15
 const DELETE_DAYS = 30; // operator 2026-10-15: requests handled by hand within 30 days until the AU deletion job is on
-// Set true only when ftpos2 confirms the store build that has the in-MAVEN delete entry + the full
-// phone wipe (branch commit 11865929, not landed yet; ACCOUNT_DELETION on). Until then the page
-// describes today's apps: MAVEN deletes through AURA, and the phone wipe is partial.
-const MAVEN_DELETE_SHIPPED = false;
+// true from 1.0.886 (ftpos2 2026-10-15: ftpos 6c5c7944, ACCOUNT_DELETION on in AU builds, full phone
+// wipe). false = the pre-886 wording: MAVEN deletes through AURA, and the phone wipe is partial.
+const MAVEN_DELETE_SHIPPED = true;
 
 const tbc = (what) => <strong>[TBC: {what}]</strong>;
 
@@ -46,7 +45,7 @@ export default function DeleteAccountPage() {
         <ul className="pb-4">
           <li><p><strong>In the AURA app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</p></li>
           {MAVEN_DELETE_SHIPPED ? (
-          <li><p><strong>In the MAVEN app:</strong> open <strong>Business Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If you own a business that is still active, close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
+          <li><p><strong>In the MAVEN app:</strong> open the <strong>Profile</strong> tab, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If an active business you own is the only thing in the way, the delete screen offers to close it for you. You can also close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
           ) : (
           <li><p><strong>MAVEN:</strong> your MAVEN account is your AURA account, so delete it in the AURA app as above. If you own a business that is still active, close it first: in AURA open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
           )}
