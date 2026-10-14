@@ -9,8 +9,10 @@ export const metadata = {
 // A value left as null shows a visible [TBC …] marker, so it can't ship unnoticed.
 const DELETE_EMAIL = null; // proposed: admin@ebizco.com.au
 const DELETE_DAYS = null; // proposed: 30 (needs someone to process requests by hand until the AU deletion job is on)
-// Partial phone wipe today (ftpos2, 2026-10-15): files and some secure-store keys stay until uninstall.
-// Return to "removed as soon as you confirm" once the app clears everything.
+// Set true only when ftpos2 confirms the store build that has the in-MAVEN delete entry + the full
+// phone wipe (branch commit 11865929, not landed yet; ACCOUNT_DELETION on). Until then the page
+// describes today's apps: MAVEN deletes through AURA, and the phone wipe is partial.
+const MAVEN_DELETE_SHIPPED = false;
 
 const tbc = (what) => <strong>[TBC: {what}]</strong>;
 
@@ -42,13 +44,19 @@ export default function DeleteAccountPage() {
         <div className="h3"><span className="sec-subtitle">How to delete</span></div>
         <ul className="pb-4">
           <li><p><strong>In the AURA app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</p></li>
+          {MAVEN_DELETE_SHIPPED ? (
+          <li><p><strong>In the MAVEN app:</strong> open <strong>Business Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If you own a business that is still active, close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
+          ) : (
           <li><p><strong>MAVEN:</strong> your MAVEN account is your AURA account, so delete it in the AURA app as above. If you own a business that is still active, close it first: in AURA open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
+          )}
           <li><p><strong>Changed your mind?</strong> Sign in again before the deletion date and tap <strong>Cancel deletion</strong>.</p></li>
           <li><p><strong>By email:</strong> write to {DELETE_EMAIL ? <a href={`mailto:${DELETE_EMAIL}?subject=Delete%20my%20account`}>{DELETE_EMAIL}</a> : tbc("email address")} from the email address or phone number on your account, and we&apos;ll confirm it&apos;s you before deleting.</p></li>
         </ul>
 
         <div className="h3"><span className="sec-subtitle">What we delete</span></div>
-        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. When you confirm, AURA signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos).</p>
+        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. {MAVEN_DELETE_SHIPPED
+          ? "When you confirm, you are signed out on every device and the copy on your phone is removed."
+          : "When you confirm, AURA signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos)."}</p>
 
         <div className="h3"><span className="sec-subtitle">What we keep, and for how long</span></div>
         <p>Australian law requires us to keep some records. They are archived securely, aren&apos;t shown to anyone, and are deleted when the period ends:</p>
