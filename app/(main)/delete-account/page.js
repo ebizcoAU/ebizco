@@ -9,8 +9,7 @@ export const metadata = {
 // A value left as null shows a visible [TBC …] marker, so it can't ship unnoticed.
 const DELETE_EMAIL = null; // proposed: admin@ebizco.com.au
 const DELETE_DAYS = null; // proposed: 30 (needs someone to process requests by hand until the AU deletion job is on)
-const AURA_MENU_PATH = null; // from ftpos2
-const MAVEN_MENU_PATH = null; // from ftpos2
+const PHONE_COPY_LINE = null; // Finance + ftpos2: today the app keeps chat photos/files and some secure-store keys after a request
 
 const tbc = (what) => <strong>[TBC: {what}]</strong>;
 
@@ -41,13 +40,14 @@ export default function DeleteAccountPage() {
 
         <div className="h3"><span className="sec-subtitle">How to delete</span></div>
         <ul className="pb-4">
-          <li><p><strong>In AURA:</strong> {AURA_MENU_PATH ?? tbc("AURA menu path")}.</p></li>
-          <li><p><strong>In MAVEN:</strong> {MAVEN_MENU_PATH ?? tbc("MAVEN menu path")}. If you own a business that is still active, close it or transfer it first.</p></li>
+          <li><p><strong>In the AURA app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</p></li>
+          <li><p><strong>MAVEN:</strong> your MAVEN account is your AURA account, so delete it in the AURA app as above. If you own a business that is still active, close it first: in AURA open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
+          <li><p><strong>Changed your mind?</strong> Sign in again before the deletion date and tap <strong>Cancel deletion</strong>.</p></li>
           <li><p><strong>By email:</strong> write to {DELETE_EMAIL ? <a href={`mailto:${DELETE_EMAIL}?subject=Delete%20my%20account`}>{DELETE_EMAIL}</a> : tbc("email address")} from the email address or phone number on your account, and we&apos;ll confirm it&apos;s you before deleting.</p></li>
         </ul>
 
         <div className="h3"><span className="sec-subtitle">What we delete</span></div>
-        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. The copy on your phone is removed as soon as you confirm.</p>
+        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. You are signed out on every device at once. {PHONE_COPY_LINE ?? tbc("what happens to the copy on your phone")}</p>
 
         <div className="h3"><span className="sec-subtitle">What we keep, and for how long</span></div>
         <p>Australian law requires us to keep some records. They are archived securely, aren&apos;t shown to anyone, and are deleted when the period ends:</p>
