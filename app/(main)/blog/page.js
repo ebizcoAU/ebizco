@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { PRODUCTS, externalLinkProps } from "@/lib/products";
 
+export const metadata = {
+  title: "News",
+  description: "News from eBizco Australia: AntiFake product authentication, ICUTV addressable TV and OZLODGE mobile hotel check-in.",
+  alternates: { canonical: "/blog" },
+};
+
 export default function BlogPage() {
   return (
     <>

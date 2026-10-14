@@ -45,6 +45,10 @@ const comparisonRows = [
   { label: "Subscription-free self-hosting", ozlodge: true, other: false },
 ];
 
+export const metadata = {
+  alternates: { canonical: "/ozkie" },
+};
+
 export default function OzkiePage() {
   return (
     <>

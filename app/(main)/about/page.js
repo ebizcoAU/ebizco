@@ -1,4 +1,10 @@
 import Link from "next/link";
+export const metadata = {
+  title: "About Us",
+  description: "eBizco Australia is a Canberra software company founded in 1998: AI voice assistants and IVR, self-hosted smart-lock check-in, SaaS platforms, and web, mobile and IoT development.",
+  alternates: { canonical: "/about" },
+};
+
 export default function AboutPage() {
   return (
     <>

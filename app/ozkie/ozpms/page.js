@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "OZPMS — Enterprise Property Management Platform | OZKIE",
+  title: "OZPMS — Enterprise Property Management Platform",
   description:
     "OZPMS is the enterprise tier of the Sovereign Edge platform — a property-manager-owned smart-lock platform for public housing, defence housing and large portfolios, built for lawful, auditable credential management at scale.",
+  alternates: { canonical: "/ozkie/ozpms" },
 };
 
 const sectors = [

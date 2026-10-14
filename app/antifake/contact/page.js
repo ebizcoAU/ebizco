@@ -20,8 +20,9 @@ const offices = [
 ];
 
 export const metadata = {
-  title: "Contact — AntiFake",
+  title: "Contact",
   description: "Contact AntiFake's Vietnam and Australia offices to book an online consultation.",
+  alternates: { canonical: "/antifake/contact" },
 };
 
 export default function AntifakeContactPage() {

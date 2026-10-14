@@ -1,4 +1,10 @@
 import Link from "next/link";
+export const metadata = {
+  title: "Privacy Policy",
+  description: "How eBizco Australia collects, uses and protects personal information on this website.",
+  alternates: { canonical: "/privacy" },
+};
+
 export default function PrivacyPage() {
   return (
     <>

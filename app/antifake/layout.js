@@ -1,16 +1,23 @@
 import AntifakeHeader from "./components/Header";
 import AntifakeFooter from "./components/Footer";
 import "./antifake.css";
+import { baseMetadata } from "@/lib/site";
 
 export const metadata = {
-  title: "AntiFake — Verify Genuine Products in a Tiktak",
+  ...baseMetadata,
+  applicationName: "AntiFake",
+  openGraph: { ...baseMetadata.openGraph, siteName: "AntiFake" },
+  title: {
+    default: "AntiFake — Verify Genuine Products in Seconds",
+    template: "%s | AntiFake",
+  },
   description:
     "AntiFake uses dynamic QR-code technology, cryptography and AI data analysis to pinpoint counterfeit goods — safeguarding your brand, distribution network and customers.",
 };
 
 export default function AntifakeLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

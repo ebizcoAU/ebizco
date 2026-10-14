@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "OZLOCK — Residential Smart Lock | OZKIE",
+  title: "OZLOCK — Residential Smart Lock",
   description:
     "OZLOCK is a self-hosted, encrypted residential smart lock. Your door, your data, your rules — no cloud dependency, no subscriptions, no vendor lock-in.",
+  alternates: { canonical: "/ozkie/ozlock" },
 };
 
 const features = [

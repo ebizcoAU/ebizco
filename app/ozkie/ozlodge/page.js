@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "OZLODGE — Hospitality Self Check-In | OZKIE",
+  title: "OZLODGE — Hospitality Self Check-In",
   description:
     "OZLODGE brings self-hosted, data-sovereign self-check-in to hotels, motels, short-stays, student housing and mining accommodation — deep PMS integration, no third-party cloud.",
+  alternates: { canonical: "/ozkie/ozlodge" },
 };
 
 const features = [

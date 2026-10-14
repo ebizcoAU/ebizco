@@ -2,13 +2,15 @@ import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
+import { SITE, baseMetadata, organizationJsonLd } from "@/lib/site";
 
 export const metadata = {
-  title: "eBizCo AU - IT Solution & Service Provider",
-  description:
-    "eBizCo AU - IT Solution & Service Provider. Turnning your business vision to online reality. We provide full cloud based application development platforms and deployment, a one stop shop with all the IT services.",
-  keywords:
-    "eBizCo AU - IT Solution & Service Provider, digital marketing, cloud services, software development, virtual servers, app development, Perth, Western Australian, factory automation, embedded control, logistic, ecommerce, online store.",
+  ...baseMetadata,
+  title: {
+    default: "eBizco Australia — Software for Hospitality & Small Business",
+    template: "%s | eBizco Australia",
+  },
+  description: SITE.description,
   icons: {
     icon: [
       { url: "/assets/img/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -21,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="no-js">
+    <html lang="en-AU" className="no-js">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/style.css" />
       </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
         <Header />
         {children}
         <Footer />

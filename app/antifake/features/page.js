@@ -76,9 +76,10 @@ const roles = [
 ];
 
 export const metadata = {
-  title: "Features — AntiFake",
+  title: "Features",
   description:
     "How AntiFake's dynamic QRCODE, cryptography and packaging platform powers every role across the manufacturing and distribution network.",
+  alternates: { canonical: "/antifake/features" },
 };
 
 export default function AntifakeFeaturesPage() {

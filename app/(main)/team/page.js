@@ -11,6 +11,12 @@ const team = [
   { name: "Anthony George", roles: ["System Engineer", "Company Engineer"], photo: "anthonygeorge.jpg" },
 ];
 
+export const metadata = {
+  title: "Our Team",
+  description: "The people behind eBizco Australia: system architects and engineers, marketing in Australia and Vietnam, legal, architecture and accounting.",
+  alternates: { canonical: "/team" },
+};
+
 export default function TeamPage() {
   return (
     <>

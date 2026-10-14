@@ -2,9 +2,10 @@ import Link from "next/link";
 import { PRODUCTS, externalLinkProps } from "@/lib/products";
 
 export const metadata = {
-  title: "ICUTV — Digital Signage, Pay As You Go | eBizCo",
+  title: "ICUTV — Digital Signage, Pay As You Go",
   description:
     "ICUTV is a pay-per-play digital signage network — manage screens from any device, track every play in real time, and only pay for what actually airs.",
+  alternates: { canonical: "/icutv" },
 };
 
 const usps = [
