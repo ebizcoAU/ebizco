@@ -15,7 +15,7 @@ export default function Footer() {
                     <a href="tel:+61 412783132" className="footer-number1">+61 412783132</a>
                     <p className="footer-address2"><i className="fal fa-map-marker-alt" />Head office: 29 Farrer Street, Braddon ACT 2612</p>
                     <p className="footer-address2"><i className="fal fa-map-marker-alt" />WA office: Unit 1/9 Boag Rd, Morley WA 6062</p>
-                    <a href="mailto:vince.phan@ebizco.com.au" className="footer-mail1"><i className="fal fa-envelope" />vince.phan@ebizco.com.au</a>
+                    <a href="mailto:admin@ebizco.com.au" className="footer-mail1"><i className="fal fa-envelope" />admin@ebizco.com.au</a>
                   </div>
                 </div>
               </div>

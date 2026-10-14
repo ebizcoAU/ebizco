@@ -51,7 +51,7 @@ export default function ContactPage() {
                 <div className="contact-box__icon"><i className="fal fa-phone-alt" /></div>
                 <div className="media-body">
                   <h4 className="contact-box__label">Phone Number &amp; Email</h4>
-                  <p className="contact-box__info"><a href="tel:+61 412783132">+(61) 412783132</a><a href="mailto:vince.phan@ebizco.com.au">vince.phan@ebizco.com.au</a></p>
+                  <p className="contact-box__info"><a href="tel:+61 412783132">+(61) 412783132</a><a href="mailto:admin@ebizco.com.au">admin@ebizco.com.au</a></p>
                 </div>
               </div>
               <div className="contact-box__item">

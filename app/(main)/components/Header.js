@@ -76,7 +76,7 @@ export default function Header() {
               <div className="col d-none d-md-block">
                 <div className="header-links style-white">
                   <ul>
-                    <li><i className="far fa-envelope" /><a href="mailto:vince.phan@ebizco.com.au">vince.phan@ebizco.com.au</a></li>
+                    <li><i className="far fa-envelope" /><a href="mailto:admin@ebizco.com.au">admin@ebizco.com.au</a></li>
                     <li><i className="far fa-map-marker-alt" />29 Farrer Street, Braddon ACT 2612</li>
                   </ul>
                 </div>
