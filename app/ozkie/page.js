@@ -192,22 +192,6 @@ export default function OzkiePage() {
         </div>
       </section>
 
-      <section className="ozkie-section ozkie-section--alt">
-        <div className="ozkie-container">
-          <div className="ozkie-testimonial">
-            <i className="fal fa-quote-left" />
-            <blockquote>
-              Customer stories are on the way — this space is reserved for verified feedback from
-              hoteliers and property managers running OZKIE.
-            </blockquote>
-            <cite>eBizCo Australia</cite>
-            <div>
-              <span className="ozkie-testimonial-note">Placeholder — real testimonials coming soon</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="ozkie-section ozkie-section--dark ozkie-cta">
         <div className="ozkie-container">
           <h2>Start your free 60-day trial</h2>

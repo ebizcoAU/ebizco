@@ -108,7 +108,7 @@ export default function IcutvPage() {
                   </li>
                 ))}
               </ul>
-              <a href="https://icumedia.com.au:9002" className="vs-btn" target="_blank" rel="noopener noreferrer">
+              <a href="/contact" className="vs-btn">
                 Start Free Trial<i className="far fa-arrow-right" />
               </a>{" "}
               <a href="#how-it-works" className="vs-btn style3">
@@ -227,7 +227,7 @@ export default function IcutvPage() {
               <p style={{ color: "var(--white-color)" }} className="mb-4">
                 Get a free 3-month trial — start with a single screen, then add more whenever you&apos;re ready.
               </p>
-              <a href="https://icumedia.com.au:8002" className="vs-btn" style={{ backgroundColor: "var(--white-color)", color: "var(--theme-color)" }} target="_blank" rel="noopener noreferrer">
+              <a href="/contact" className="vs-btn" style={{ backgroundColor: "var(--white-color)", color: "var(--theme-color)" }}>
                 Try It Now<i className="far fa-arrow-right" />
               </a>
             </div>

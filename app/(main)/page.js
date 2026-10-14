@@ -120,14 +120,6 @@ const blogPosts = [
     href: PRODUCTS.projman.href,
     external: PRODUCTS.projman.external,
   },
-  {
-    id: "motocare",
-    img: "/assets/img/blog/blog-5-3.jpg",
-    tag: "Affiliat",
-    title: "Motocare Partnership",
-    href: "/blog-details",
-    external: false,
-  },
 ];
 
 function useHeroRotation(count, delay = 6000) {

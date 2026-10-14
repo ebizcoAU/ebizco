@@ -31,7 +31,6 @@ export default function AntifakeHeader() {
                 </ul>
               </div>
               <div className="de-flex-col">
-                <a className="btn-custom" href="https://demo.antifake.vn"><i className="fa fa-arrow-right" />Sign In</a>
                 <span id="menu-btn" onClick={() => setOpen((v) => !v)} role="button" tabIndex={0} aria-label="Toggle navigation" />
               </div>
             </div>
