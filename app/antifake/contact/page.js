@@ -5,7 +5,7 @@ const offices = [
     style: { backgroundColor: "#777" },
     address: "106/6 TX13, P. Thạnh Xuân, Q12, Ho Chi Minh City, Vietnam",
     phone: "+84 908 888 218",
-    email: "vince.phan@antifake.vn",
+    email: "admin@antifake.vn",
     whatsapp: "https://wa.me/84908888218",
   },
   {
@@ -14,7 +14,7 @@ const offices = [
     style: undefined,
     address: "Unit 1/9 Boag Rd, Morley WA 6062, Australia",
     phone: "+61 412 783 132",
-    email: "vince.phan@antifake.au",
+    email: "admin@antifake.au",
     whatsapp: "https://wa.me/61412783132",
   },
 ];
