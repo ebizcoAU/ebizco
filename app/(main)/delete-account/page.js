@@ -64,7 +64,7 @@ export default function DeleteAccountPage() {
         <ul>
           <li><p>Invoices and receipts for your MAVEN subscription or fees: up to 7 years.</p></li>
           <li><p>Ride records (fares, receipts, driver payments and settlements): up to 7 years. Pickup and drop-off points are removed once any complaint period has closed.</p></li>
-          <li><p>If you run a business on MAVEN, its sales and tax records are the business&apos;s own records. The business must keep them for 5 years (7 for a company). Delete or close the business separately, and download what you need first.</p></li>
+          <li><p>If you run a business on MAVEN, its sales and tax records are the business&apos;s own records. The business must keep them for 5 years (7 for a company). Delete or close the business separately.</p></li>
         </ul>
         <p className="pb-4">Records we keep no longer show your name in any list or screen.</p>
 
