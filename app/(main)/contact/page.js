@@ -97,13 +97,13 @@ export default function ContactPage() {
         <div className="row">
           <div className="col-lg-6 mb-30">
             <div className="contact-box">
-              <h3 className="contact-box__title h4">Vietname Office Address</h3>
+              <h3 className="contact-box__title h4">Vietnam Office Address</h3>
               <p className="contact-box__text" />
               <div className="contact-box__item">
                 <div className="contact-box__icon"><i className="fal fa-phone-alt" /></div>
                 <div className="media-body">
                   <h4 className="contact-box__label">Phone Number &amp; Email</h4>
-                  <p className="contact-box__info"><a href="tel:+86 0908999218">+(86) 908888218</a><a href="mailto:vince.phan@antifake.vn">vince.phan@antifake.vn</a></p>
+                  <p className="contact-box__info"><a href="tel:+84908888218">+(84) 908 888 218</a><a href="mailto:vince.phan@antifake.vn">vince.phan@antifake.vn</a></p>
                 </div>
               </div>
               <div className="contact-box__item">
