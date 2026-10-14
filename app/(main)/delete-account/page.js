@@ -1,14 +1,15 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Delete your account | AURA and MAVEN",
+  title: "Delete your AURA or MAVEN account",
   description: "How to delete your AURA or MAVEN account, what we delete and what the law requires us to keep.",
+  alternates: { canonical: "/delete-account" },
 };
 
 // Placeholders the operator confirms before this page is deployed (XF-371 S1-web).
 // A value left as null shows a visible [TBC …] marker, so it can't ship unnoticed.
-const DELETE_EMAIL = null; // proposed: admin@ebizco.com.au
-const DELETE_DAYS = null; // proposed: 30 (needs someone to process requests by hand until the AU deletion job is on)
+const DELETE_EMAIL = "admin@ebizco.com.au"; // operator 2026-10-15
+const DELETE_DAYS = 30; // operator 2026-10-15: requests handled by hand within 30 days until the AU deletion job is on
 // Set true only when ftpos2 confirms the store build that has the in-MAVEN delete entry + the full
 // phone wipe (branch commit 11865929, not landed yet; ACCOUNT_DELETION on). Until then the page
 // describes today's apps: MAVEN deletes through AURA, and the phone wipe is partial.
