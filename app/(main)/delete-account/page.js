@@ -9,7 +9,8 @@ export const metadata = {
 // A value left as null shows a visible [TBC …] marker, so it can't ship unnoticed.
 const DELETE_EMAIL = null; // proposed: admin@ebizco.com.au
 const DELETE_DAYS = null; // proposed: 30 (needs someone to process requests by hand until the AU deletion job is on)
-const PHONE_COPY_LINE = null; // Finance + ftpos2: today the app keeps chat photos/files and some secure-store keys after a request
+// Partial phone wipe today (ftpos2, 2026-10-15): files and some secure-store keys stay until uninstall.
+// Return to "removed as soon as you confirm" once the app clears everything.
 
 const tbc = (what) => <strong>[TBC: {what}]</strong>;
 
@@ -47,7 +48,7 @@ export default function DeleteAccountPage() {
         </ul>
 
         <div className="h3"><span className="sec-subtitle">What we delete</span></div>
-        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. You are signed out on every device at once. {PHONE_COPY_LINE ?? tbc("what happens to the copy on your phone")}</p>
+        <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. When you confirm, AURA signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos).</p>
 
         <div className="h3"><span className="sec-subtitle">What we keep, and for how long</span></div>
         <p>Australian law requires us to keep some records. They are archived securely, aren&apos;t shown to anyone, and are deleted when the period ends:</p>
