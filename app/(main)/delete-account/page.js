@@ -45,7 +45,7 @@ export default function DeleteAccountPage() {
         <ul className="pb-4">
           <li><p><strong>In the AURA app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</p></li>
           {MAVEN_DELETE_SHIPPED ? (
-          <li><p><strong>In the MAVEN app:</strong> open the <strong>Profile</strong> tab, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If an active business you own is the only thing in the way, the delete screen offers to close it for you. You can also close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
+          <li><p><strong>In the MAVEN app:</strong> open the <strong>Profile</strong> tab, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If an active business you own is the only thing in the way, the delete screen offers to close it for you. It stays closed even if you cancel the deletion; email <a href={`mailto:${DELETE_EMAIL}`}>{DELETE_EMAIL}</a> to reopen it. You can also close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
           ) : (
           <li><p><strong>MAVEN:</strong> your MAVEN account is your AURA account, so delete it in the AURA app as above. If you own a business that is still active, close it first: in AURA open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</p></li>
           )}
@@ -55,7 +55,7 @@ export default function DeleteAccountPage() {
 
         <div className="h3"><span className="sec-subtitle">What we delete</span></div>
         <p className="pb-4">Your profile, contacts, chats, location history and the devices linked to your account. {MAVEN_DELETE_SHIPPED
-          ? "When you confirm, you are signed out on every device and the copy on your phone is removed."
+          ? "When you confirm, you're signed out on every device, and this phone's copy is removed now."
           : "When you confirm, AURA signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos)."}</p>
 
         <div className="h3"><span className="sec-subtitle">What we keep, and for how long</span></div>
