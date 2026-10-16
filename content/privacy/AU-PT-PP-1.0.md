@@ -8,7 +8,7 @@
 | Message and call metadata: who to whom, when, size, call length | delivering messages, connecting calls, stopping abuse | Australia | [CONFIRM: backend, days] |
 | Message, photo, file, voice-note and call content | **we can't read it** (end-to-end encrypted) | encrypted packets waiting on our Australian relay | deleted once delivered; at most 30 days if undelivered |
 | Personal calendar (events you create in AURA) | reminders, available on a new phone | Australia | while your account is open |
-| Location and places you search for | showing the demo map and route; **local weather** (position rounded to ~1 km, or your address) | phone → our Australian server (routing, not stored); place search: **Google (USA)**; address lookup: **OpenStreetMap Nominatim**; map tiles: **Geoapify** through our server | **not stored** |
+| Location and places you search for | showing the demo map and route; **local weather** (position rounded to ~1 km, or your address, sent to **OpenWeatherMap (UK)**; not stored) | phone → our Australian server (routing, not stored); place search: **Google (USA)**; address lookup: **OpenStreetMap Nominatim**; map tiles: **Geoapify** through our server | **not stored** |
 | Sign-in logs, IP address, device | security, fraud prevention | Australia | 24 months |
 | A random app-install ID and push token | sending notifications | Google Firebase (Cloud Messaging, Installations) / Apple (USA) | while you use the app |
 | Crash reports (device, app version, error; no name, no content) | fixing the app | Google Firebase Crashlytics (USA) | ~90 days |
