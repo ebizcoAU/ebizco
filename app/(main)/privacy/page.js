@@ -29,6 +29,14 @@ export default function PrivacyPage() {
           <p className="sec-title3 h1">Privacy Policy</p>
         </div>
         <div className="pb-4">
+          <p className="mb-1"><strong>Using our apps?</strong> The apps have their own privacy notices:</p>
+          <ul>
+            <li><Link href="/privacy/aura" prefetch={false}>AURA Privacy Policy (pre-trial)</Link></li>
+            <li><Link href="/privacy/maven" prefetch={false}>MAVEN business privacy notice (pre-trial)</Link></li>
+          </ul>
+          <p>This page covers this website only.</p>
+        </div>
+        <div className="pb-4">
           <p className="text-soft">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
             We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.</p>
         </div>

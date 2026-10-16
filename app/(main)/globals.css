@@ -57,3 +57,11 @@
   object-fit: cover;
   object-position: center top;
 }
+
+/* App privacy notices (/privacy/aura, /privacy/maven) */
+.privacy-notice .notice-draft { background: #fff4e5; border: 1px solid #f0b45a; border-radius: 6px; padding: 12px 16px; margin-bottom: 24px; color: #5c3b00; }
+.privacy-notice mark.notice-open { background: #ffe08a; color: #3d2c00; padding: 0 3px; border-radius: 3px; }
+.privacy-notice .notice-box { border-left: 4px solid #0d6efd; background: #f4f8ff; padding: 16px 20px; margin: 0 0 24px; }
+.privacy-notice .notice-table { margin-bottom: 24px; }
+.privacy-notice .notice-table th { white-space: nowrap; }
+.privacy-notice p, .privacy-notice li { line-height: 1.7; }

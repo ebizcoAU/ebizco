@@ -27,3 +27,17 @@ npm run build   # production build
 npm run start   # run the production build; reads PORT from the environment (defaults to 3000)
 npm run lint    # lint the project
 ```
+
+## Deploy notes (app pages)
+
+- **`/delete-account` self-service form.** The form calls each market's Nexus API, set at **build** time:
+  `NEXT_PUBLIC_NEXUS_API_AU=https://api-au.ebizco.com.au/api/v1` (and later `NEXT_PUBLIC_NEXUS_API_VN`).
+  Unset = no form for that market (the page then shows only the in-app and email paths), so leave it unset
+  until the AU production API answers. The page text says AU 23 days / VN 30 days (`GRACE_DAYS`); the real
+  due date comes from the API reply. The API must allow CORS from `https://ebizco.com.au` and
+  `https://www.ebizco.com.au` for `GET /auth/otp/channels` and `POST /auth/otp/send`, `/auth/otp/verify`,
+  `/public/account-deletion` (JSON body, so browsers send an `OPTIONS` preflight).
+- **App privacy notices** (`/privacy/aura`, `/privacy/maven`). The text is Finance's, copied verbatim with
+  `node scripts/sync-privacy.mjs <nexus notice.md> "### 2b." <version>` into `content/privacy/`; the version
+  and effective date live in `lib/privacyNotices.js`. While any open marker remains or `effective` is null,
+  the page shows a draft banner and is `noindex`. Deploy only on the PM's word.

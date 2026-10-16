@@ -1,0 +1,31 @@
+**1. Who we are.** The AURA pre-trial is provided by **EBIZCO AUSTRALIA PTY LTD** (ABN 44 091 466 858, 29 Farrer Street, Braddon ACT 2612) ("we"). Privacy contact: **admin@ebizco.com.au**. This policy follows the *Privacy Act 1988* (Cth) and the Australian Privacy Principles (APPs). The pre-trial is invite-only, free and for people **16 and over** (at sign-up you tick "I am 16 or older").
+
+**2. What we collect, why, where, and for how long**
+| Information | Why | Where | Kept |
+|---|---|---|---|
+| Display name, phone number or email, PIN (hashed), date of birth | create, sign in to and protect your account | our servers in Australia | while your account is open |
+| Your AURA contacts (people you linked with by QR code) | connecting, messaging, calling | **on your phone**; our server only looks up the recipient's app id to deliver messages | on your phone until you delete them |
+| Message and call metadata: who to whom, when, size, call length | delivering messages, connecting calls, stopping abuse | Australia | [CONFIRM: backend, days] |
+| Message, photo, file, voice-note and call content | **we can't read it** (end-to-end encrypted) | encrypted packets waiting on our Australian relay | deleted once delivered; at most 30 days if undelivered |
+| Personal calendar (events you create in AURA) | reminders, available on a new phone | Australia | while your account is open |
+| Location and places you search for | showing the demo map and route; **local weather** (position rounded to ~1 km, or your address) | phone → our Australian server (routing, not stored); place search: **Google (USA)**; address lookup: **OpenStreetMap Nominatim**; map tiles: **Geoapify** through our server | **not stored** |
+| Sign-in logs, IP address, device | security, fraud prevention | Australia | 24 months |
+| A random app-install ID and push token | sending notifications | Google Firebase (Cloud Messaging, Installations) / Apple (USA) | while you use the app |
+| Crash reports (device, app version, error; no name, no content) | fixing the app | Google Firebase Crashlytics (USA) | ~90 days |
+| **"AI help":** the text of a phrase the assistant didn't understand (never audio), with context (what the assistant expected, the menu or list it was using, any order in progress, your language, the assistant's name); **after three tries, the conversation so far as text**; at most 5 KB per request | understanding your request (the AURA assistant) | Australia → **OpenAI (USA)** (model gpt-4o-mini) | our servers: [backend: log/retention]; OpenAI: not used for training under its API terms, and may be kept up to 30 days for abuse monitoring |
+| Consent records (which consent, version, when) | showing we asked properly | Australia | while your account is open; then 24 months without your name |
+- **Voice:** speech recognition and spoken replies run **on your phone**; **audio is never sent**. **"AI help"** (on by default): when the assistant can't understand a phrase, the **text** of that phrase, with a little context, may go to our Australian server and to **OpenAI (USA)** to work it out. If it still can't after three tries, the conversation so far is sent as text (never more than a few kilobytes). Turn "AI help" off in Settings and everything stays on your phone.
+- **Demos:** rides, hotels, food, the marketplace and MAVEN venues use **sample data**. Nothing is booked, bought or delivered, and no money changes hands. A demo route you try is used to draw the map and **isn't stored**.
+- **How we collect it:** from you, when you sign up and use the app. We don't buy data, and we don't read or upload your phone's address book.
+- **If you don't give it:** we need your name and a phone number or email to run an account. Location and crash reports are optional; without location the demo map can't show where you are.
+- We **don't sell** personal information, show ads or track you across apps. We don't use automated decisions that significantly affect you.
+
+**3. Who we disclose it to.** Service providers that work for us: our Australian hosting provider [OPERATOR: name]; Google (Firebase Cloud Messaging, Crashlytics) and Apple (push) in the **USA**; **OpenAI (USA)** for "AI help" text; for the demo map, **Google (USA)** (place search), **OpenStreetMap Nominatim** (address lookup, Europe) and **Geoapify** (map tiles, through our server). Authorities when Australian law requires it. For users in Vietnam, Vietnamese authorities under Vietnamese law (see the BANOI policy). **We can't disclose message or call content because we don't have it.**
+
+**4. Security.** Encryption in transit; one-to-one messages and calls end-to-end encrypted; role-based staff access. If a data breach is likely to cause you serious harm, we tell you and the OAIC under the Notifiable Data Breaches scheme.
+
+**5. Delete your account.** In AURA (Profile → Delete account) or at https://ebizco.com.au/delete-account. Your profile, calendar, devices and waiting messages are deleted after **23 days** (you can cancel before then); you're signed out everywhere and this phone's copy is removed now. Messages you sent stay on the recipient's phone. Your chat history **isn't included in iCloud/Google backups**; if you lose or change your phone, old history can't be restored. We keep only security logs (24 months) and a consent record without your name (24 months).
+
+**6. Access, correction, complaints.** Ask in the app or at admin@ebizco.com.au; we reply within 30 days. If you're not satisfied, complain to the **OAIC** (oaic.gov.au, 1300 363 992).
+
+**7. Changes.** We tell you in the app before a change takes effect. **Your account carries on after the pre-trial:** when the AURA trial and launch begin, your account, contacts and calendar stay as they are, with the same company and the same Australian servers. The full AURA policy then replaces this one; we show you what changed in the app first, and ask again for any new purpose.
