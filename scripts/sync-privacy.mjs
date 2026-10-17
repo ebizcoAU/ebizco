@@ -12,9 +12,17 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { dirname, basename } from "node:path";
 
-const [src, prefix, version] = process.argv.slice(2);
+const [src, prefix, version] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 if (!src || !prefix || !version) {
   console.error("usage: node scripts/sync-privacy.mjs <notice.md> <heading prefix> <version>");
+  process.exit(1);
+}
+
+// Finance edits these files live in the shared nexus tree: sync only committed text (pass --allow-dirty to override).
+let dirty = "";
+try { dirty = execFileSync("git", ["status", "--porcelain", "--", basename(src)], { cwd: dirname(src) }).toString().trim(); } catch {}
+if (dirty && !process.argv.includes("--allow-dirty")) {
+  console.error(`${basename(src)} has uncommitted edits; wait for Finance's commit (or pass --allow-dirty)`);
   process.exit(1);
 }
 
