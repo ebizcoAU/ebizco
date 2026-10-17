@@ -9,7 +9,7 @@
 | Information | Why | Where | Kept |
 |---|---|---|---|
 | Venue details: name, address, phone, email, hours, business type, ABN | running the app and your devices | Australia | while the venue is active; after closure: export offered, personal non-book fields anonymised at once, books kept **5 years (7 for companies)** then deleted (M9) |
-| Reservation name and phone; a guest's first name on an order round (cleared after 30 days, on the device) | holding a table, calling the guest | phone/tablet → Australia (reservations); order-round names stay on the device | reservations: **OPEN, for backend**; guest names 30 days |
+| Reservation name and phone; a guest's first name on an order round (cleared after 30 days, on the device) | holding a table, calling the guest | phone/tablet → Australia (reservations); order-round names stay on the device | reservation name and phone: deleted **30 days after the booking date**; guest names 30 days |
 | Sales: totals, items, payment method, a customer name/company/ABN/email if a tax invoice is asked for, receipt image | the venue's sales and tax records | Australia | as for venue details |
 | Receipts and invoices you photograph (expense records) | your tax and business records | stored on our Australian server, private | **5 years** from the record date (**7** for companies), then deleted automatically; **if you close the venue or delete your account**, we first offer you a copy (ZIP), then keep them as books for that period (PM 2026-10-17) |
 | Menu, stock, suppliers, purchase orders | running the POS and stock | Australia | while the venue is active |
