@@ -26,6 +26,8 @@
 
 **3. Who we disclose it to.** Service providers that work for us: our hosting provider, an Australian data centre provider (Sydney region), named here once contracted; Google (Firebase Cloud Messaging, Crashlytics) and Apple (push) in the **USA**; **OpenAI (USA)** for "AI help" text; for the demo map, **Google (USA)** (place search), **OpenStreetMap Nominatim** (address lookup, Europe) and **Geoapify** (map tiles, through our server). Authorities when Australian law requires it. For users in Vietnam, Vietnamese authorities under Vietnamese law (see the BANOI policy). **We can't disclose message or call content because we don't have it.**
 
+Our website, ebizco.com.au, is hosted in Singapore. When you visit it, the web server records standard logs (your IP address, browser type, the page and time), kept 14 days for security, then deleted.
+
 **4. Security.** Encryption in transit; one-to-one messages, and calls between up-to-date apps, are end-to-end encrypted (support calls with our staff are encrypted in transit, not end to end); role-based staff access. If a data breach is likely to cause you serious harm, we tell you and the OAIC under the Notifiable Data Breaches scheme.
 
 **5. Delete your account.** In AURA (Profile → Delete account) or at https://ebizco.com.au/delete-account. Your profile, calendar, devices and waiting messages are deleted after **23 days** (you can cancel before then); you're signed out everywhere and this phone's copy is removed now. Messages you sent stay on the recipient's phone. Your chat history **isn't included in iCloud/Google backups**; if you lose or change your phone, old history can't be restored. We keep only security logs (24 months) and a consent record without your name (24 months).
