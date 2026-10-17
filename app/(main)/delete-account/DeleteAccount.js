@@ -43,7 +43,7 @@ const T = {
       already: (due) => `A deletion is already pending for this account. It will be deleted on ${due}.`,
       blockedTitle: "Something needs sorting out first",
       blocked: {
-        ACTIVE_BUSINESS: "You own an active business. Close it in the app first (or delete from the MAVEN app, which offers to close it for you), then come back.",
+        ACTIVE_BUSINESS: `You own an active business. Close it in the app first (or delete from the MAVEN app, which offers to close it for you), or email ${DELETE_EMAIL}, then come back.`,
         OPEN_MARKET_ORDERS: "You have orders that are still in progress. Wait until they're finished.",
         RIDE_SETTLEMENT_DUE: "A ride settlement is still owed. Settle it in the app first.",
         OPEN_INVOICE: "You have an unpaid invoice. Pay it first, or email us.",
@@ -110,7 +110,7 @@ const T = {
       already: (due) => `Tài khoản đang chờ xoá. Tài khoản sẽ bị xoá vào ngày ${due}.`,
       blockedTitle: "Cần xử lý trước",
       blocked: {
-        ACTIVE_BUSINESS: "Bạn đang sở hữu một cửa hàng còn hoạt động. Hãy đóng cửa hàng trong ứng dụng trước, rồi quay lại.",
+        ACTIVE_BUSINESS: `Bạn đang sở hữu một cửa hàng còn hoạt động. Hãy đóng cửa hàng trong ứng dụng trước, hoặc email ${DELETE_EMAIL}, rồi quay lại.`,
         OPEN_MARKET_ORDERS: "Bạn còn đơn hàng chưa xong. Hãy chờ đơn hoàn tất.",
         RIDE_SETTLEMENT_DUE: "Bạn còn khoản quyết toán chuyến xe chưa trả. Hãy thanh toán trong ứng dụng trước.",
         OPEN_INVOICE: "Bạn còn hoá đơn chưa thanh toán. Hãy thanh toán trước, hoặc gửi email cho chúng tôi.",
