@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { TERMS_EFFECTIVE_DATE as EFFECTIVE_DATE, TERMS_DRAFT } from "@/lib/terms";
 
 export const metadata = {
   title: "Terms of Use",
   description: "Terms of use for the AURA, MAVEN, BANOI and MAOI apps.",
   alternates: { canonical: "/terms" },
+  ...(TERMS_DRAFT ? { robots: { index: false, follow: false } } : {}),
 };
 
 // Placeholder structure (XF-371, PM 2026-10-16): the text comes from Finance / the operator.
 // A section whose body is null shows a visible [Text to come …] marker, so it can't ship unnoticed.
-const EFFECTIVE_DATE = null; // e.g. "1 November 2026"
 const SECTIONS = [
   { id: "about", title: "1. About these terms", body: null },
   { id: "accounts", title: "2. Your account", body: null },
@@ -23,6 +24,8 @@ const SECTIONS = [
 ];
 
 const tbc = <strong>[Text to come: Finance / operator]</strong>;
+
+if (!TERMS_DRAFT && SECTIONS.some((s) => !s.body)) throw new Error("terms: effective date set but a section has no text");
 
 export default function TermsPage() {
   return (
@@ -47,6 +50,11 @@ export default function TermsPage() {
         <div className="title-area"><span className="sec-subtitle">AURA, MAVEN, BANOI and MAOI</span>
           <p className="sec-title3 h1">Terms of Use</p>
         </div>
+        {TERMS_DRAFT && (
+          <div className="privacy-notice"><div className="notice-draft" role="note">
+            <strong>Draft, not yet in effect.</strong> These terms are still being written; the final text will be published here.
+          </div></div>
+        )}
         <p className="pb-4">Effective date: {EFFECTIVE_DATE || tbc}. These terms are between you and Ebizco Australia Pty Ltd (ABN 44 091 466 858).</p>
         {SECTIONS.map((s) => (
           <div key={s.id} id={s.id}>
