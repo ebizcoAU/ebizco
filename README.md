@@ -38,6 +38,7 @@ npm run lint    # lint the project
   `https://www.ebizco.com.au` for `GET /auth/otp/channels` and `POST /auth/otp/send`, `/auth/otp/verify`,
   `/public/account-deletion` (JSON body, so browsers send an `OPTIONS` preflight).
 - **App privacy notices** (`/privacy/aura`, `/privacy/maven`). The text is Finance's, copied verbatim with
-  `node scripts/sync-privacy.mjs <nexus notice.md> "### 2b." <version>` into `content/privacy/`; the version
-  and effective date live in `lib/privacyNotices.js`. While any open marker remains or `effective` is null,
+  `node scripts/sync-privacy.mjs <nexus notice.md> "### 2b." <version>` into `content/privacy/`; the script
+  also writes `<version>.meta.json` (the effective date from Finance's heading, and the source commit); the
+  version per page is in `lib/privacyNotices.js`. While any open marker remains or `effective` is null,
   the page shows a draft banner and is `noindex`. Deploy only on the PM's word.
