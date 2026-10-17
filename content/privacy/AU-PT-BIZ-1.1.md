@@ -14,9 +14,9 @@
 | Receipts and invoices you photograph (expense records) | your tax and business records | stored on our Australian server, private | **5 years** from the record date (**7** for companies), then deleted automatically; **if you close the venue or delete your account**, we first offer you a copy (ZIP), then keep them as books for that period (PM 2026-10-17) |
 | Menu, stock, suppliers, purchase orders | running the POS and stock | Australia | while the venue is active |
 | Devices (type, role POS/KDS/kiosk/CDS, install id) | pairing, sending orders to the kitchen | Australia | until the device is removed |
-| Kiosk voice (if on) | taking a customer's order | **on the kiosk only**; nothing sent | not kept (**OPEN, for ftpos2 (M6)**) |
-| Staff sign-in PIN | knowing who uses a shared device | **OPEN, for ftpos2** (device only? hashed?) | **OPEN** |
+| Kiosk voice (if on) | taking a customer's order | **on the kiosk only**; nothing sent | not kept: nothing about the speaker is stored after the order (no text, no audio) |
+| The venue's sign-in PIN (one code your staff share) | knowing the device is used by your venue | Australia, kept only as a salted, slow hash; repeated wrong tries lock it | until you change it; removed when the venue closes |
 
 - **Voice:** till voice is off in this pre-trial (touch-only). When it's switched on, speech stays on the device (as AURA), and any "AI help" leg is added here first. **OPEN, for ftpos1 (M3).**
-- **Disclosure:** our Australian hosting provider [OPERATOR: name, e.g. OVHcloud Sydney (XF-370)]; Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
+- **Disclosure:** our hosting provider, an Australian data centre provider (Sydney region), named here once contracted; Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
 - **Access and correction:** staff and customers ask **the venue** first; the venue (or they directly) can write to admin@ebizco.com.au. We reply within 30 days; complaints to the OAIC.
