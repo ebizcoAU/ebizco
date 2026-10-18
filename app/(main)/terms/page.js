@@ -20,7 +20,7 @@ const SECTIONS = [
   { id: "ending", title: "7. Ending your account", body: <>You can delete your account at any time: see <Link href="/delete-account" prefetch={false}>Delete your account</Link>.</> },
   { id: "liability", title: "8. Liability", body: null },
   { id: "changes", title: "9. Changes to these terms", body: null },
-  { id: "contact", title: "10. Contact", body: <>Email <a href="mailto:support@ebizco.com.au">support@ebizco.com.au</a>, or <Link href="/contact" prefetch={false}>contact us</Link>.</> },
+  { id: "contact", title: "10. Contact", body: <>Email <a href="mailto:admin@ebizco.com.au">admin@ebizco.com.au</a>, or <Link href="/contact" prefetch={false}>contact us</Link>.</> },
 ];
 
 const tbc = <strong>[Text to come: Finance / operator]</strong>;
