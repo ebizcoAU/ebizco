@@ -17,6 +17,6 @@
 | The venue's sign-in PIN (one code your staff share) | knowing the device is used by your venue | checked by our Australian server, which keeps only a salted, slow hash; this device keeps a salted, slow check value for offline use (never synced or backed up); repeated wrong tries lock it | until you change it; removed when the venue closes |
 
 - **Voice:** voice is off at the till and the kiosk in this pre-trial (touch only), and nothing typed is sent to an AI service. When voice is switched on, speech will stay on the device (as in AURA), and we'll update this notice first.
-- **Disclosure:** our hosting provider, an Australian data centre provider (Sydney region), named here once contracted; Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
+- **Disclosure:** our hosting provider, Vultr (data centre in Sydney, Australia); Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
 - **Website:** Our website, ebizco.com.au, is hosted in Singapore. When you visit it, the web server records standard logs (your IP address, browser type, the page and time), kept 14 days for security, then deleted.
 - **Access and correction:** staff and customers ask **the venue** first; the venue (or they directly) can write to admin@ebizco.com.au. We reply within 30 days; complaints to the OAIC.
