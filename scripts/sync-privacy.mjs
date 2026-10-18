@@ -6,9 +6,9 @@
 // The section runs from its heading to the next "---" rule or "##" heading. Only builder-facing marks are
 // removed: Finance's ◆ row marker, the in-app button row "[Read the full notice] [OK]" and an italic
 // "*( … )*" editor note directly under the heading. Everything else, including OPEN / CONFIRM / OPERATOR
-// markers, is kept so the page shows them until Finance closes them. The heading's effective date (or its
+// markers, is kept (with --draft) so the page shows them until Finance closes them. The heading's effective date (or its
 // "[date]" placeholder) goes into content/privacy/<version>.meta.json with the source commit.
-// Internal refs in the user text ("(BOOKS-1 a, PM …)", "PM nexus-…", "XF-…") fail the sync (exit 1, nothing written).
+// Internal refs and editor marks in the user text fail the sync (exit 1, nothing written); see INTERNAL_REFS.
 import { readFileSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { dirname, basename } from "node:path";
@@ -46,11 +46,22 @@ body = body
   .map((l) => l.replace(/ ?◆ ?/g, (m) => (m.startsWith(" ") && m.endsWith(" ") ? " " : "")));
 while (body.length && !body[body.length - 1].trim()) body.pop();
 
-// Finance's working refs ("(BOOKS-1 a, PM 2026-10-17)", "PM nexus-28", "XF-388") must never reach the
-// public page: fail and list them so Finance fixes the source, never strip them here (PM 2026-10-18).
-const INTERNAL_REFS = [/\((?:[A-Z][A-Z0-9-]*\s+[a-d]\b|PM\b)[^)]*\)/, /\bPM nexus-/, /\bXF-\d/, /\bnexus-[0-9a-f]{2}\b/];
-// Line numbers are the source file's (body has lost its leading lines, so look the text up there).
-const srcLine = (text) => lines.findIndex((l, j) => j > start && j < end && l.includes(text)) + 1;
+// Finance's working refs ("(BOOKS-1 a, PM 2026-10-17)", "PM nexus-28", "XF-388", "(M9)") and editor marks
+// (◆ ✅ ⚠, "Finance note") must never reach the public page: fail and list them so Finance fixes the source,
+// never strip them here (PM 2026-10-18; patterns from Finance). Open markers ([OPEN / [CONFIRM / [OPERATOR)
+// fail too, unless --draft: a draft sync keeps them and the page shows its draft banner.
+const INTERNAL_REFS = [
+  /\((?:[A-Z][A-Z0-9-]*\s+[a-d]\b|PM\b)[^)]*\)/,   // (BOOKS-1 a, …) (PM 2026-10-17)
+  /\((?:PM|operator)\b/,
+  /\bPM nexus-/,
+  /\bXF-\d+/,
+  /\bnexus-[0-9a-f]{2}\b/,
+  /\b[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*-\d+[a-z]?\s+[a-d]\b/,   // ruling tags: BOOKS-1 a, PT-1 b
+  /\((?:B|M)\d+u?\)/,                              // (B14) (M2u)
+  /[◆✅⚠]/,
+  /Finance note/i,
+  ...(process.argv.includes("--draft") ? [] : [/\[(?:OPERATOR|OPEN|CONFIRM)/]),
+];
 const leaks = body.flatMap((l) => INTERNAL_REFS.flatMap((re) => {
   const m = l.match(re);
   return m ? [`  line ${srcLine(m[0])}: ${m[0]}`] : [];
