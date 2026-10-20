@@ -15,7 +15,7 @@ export default function PrivacyNotice({ app }) {
         <ul className="breadcumb-menu">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/privacy" prefetch={false}>Privacy</Link></li>
-          <li>{app.toUpperCase()}</li>
+          <li>{n.name}</li>
         </ul>
       </div>
     </div>
@@ -33,6 +33,7 @@ export default function PrivacyNotice({ app }) {
         <div className="title-area"><span className="sec-subtitle">Version {n.version}</span>
           <p className="sec-title3 h1">{n.title}</p>
         </div>
+        {n.renameNote && <p className="pb-2"><strong>{n.renameNote}</strong></p>}
         <p className="pb-2">Version {n.version} · Effective: {n.effective || <mark className="notice-open">[date to come]</mark>}</p>
         {other && (
           <p className="pb-2">Read this with the <Link href={other.path} prefetch={false}>{other.title}</Link> ({other.version}), which covers the owner&apos;s own account.</p>

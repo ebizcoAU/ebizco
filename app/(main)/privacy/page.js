@@ -31,8 +31,8 @@ export default function PrivacyPage() {
         <div className="pb-4">
           <p className="mb-1"><strong>Using our apps?</strong> The apps have their own privacy notices:</p>
           <ul>
-            <li><Link href="/privacy/aura" prefetch={false}>AURA Privacy Policy (pre-trial)</Link></li>
-            <li><Link href="/privacy/maven" prefetch={false}>MAVEN business privacy notice (pre-trial)</Link></li>
+            <li><Link href="/privacy/talkkim" prefetch={false}>TalkKim Privacy Policy (pre-trial)</Link></li>
+            <li><Link href="/privacy/talkpos" prefetch={false}>TalkPOS business privacy notice (pre-trial)</Link></li>
           </ul>
           <p>This page covers this website only.</p>
         </div>

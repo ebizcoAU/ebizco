@@ -15,7 +15,7 @@ const GRACE_DAYS = { au: 23, vn: 30 };
 // AU sends codes by email until an SMS gateway exists (OTP_SMS off); VN by SMS.
 const FALLBACK_CHANNEL = { au: "email", vn: "sms" };
 // true from 1.0.886 (ftpos2 2026-10-15: ftpos 6c5c7944, ACCOUNT_DELETION on in AU builds, full phone
-// wipe). false = the pre-886 wording: MAVEN deletes through AURA, and the phone wipe is partial.
+// wipe). false = the pre-886 wording: TalkPOS deletes through TalkKim, and the phone wipe is partial.
 const MAVEN_DELETE_SHIPPED = true;
 // BANOI / MAOI in-app deletion: ACCOUNT_DELETION is still off in the shipped VN builds, and the MAOI entry
 // sits on an unlanded branch (ftpos2 2026-10-16). Keep false until ftpos2 confirms the flip; the VN view then
@@ -25,8 +25,8 @@ const VN_INAPP_SHIPPED = false;
 const T = {
   au: {
     lang: "en",
-    subtitle: "AURA and MAVEN",
-    intro: "You can ask us to delete your AURA or MAVEN account at any time: here, inside the app, or by email. This page explains how, what we delete, and what Australian law requires us to keep.",
+    subtitle: "TalkKim and TalkPOS",
+    intro: "You can ask us to delete your TalkKim (formerly AURA) or TalkPOS (formerly MAVEN) account at any time: here, inside the app, or by email. This page explains how, what we delete, and what Australian law requires us to keep.",
     form: {
       title: "Delete your account here",
       lead: (c) => `Enter the ${c === "email" ? "email address" : "mobile number"} on your account. We'll send it a 6-digit code to confirm it's you.`,
@@ -43,7 +43,7 @@ const T = {
       already: (due) => `A deletion is already pending for this account. It will be deleted on ${due}.`,
       blockedTitle: "Something needs sorting out first",
       blocked: {
-        ACTIVE_BUSINESS: `You own an active business. Close it in the app first (or delete from the MAVEN app, which offers to close it for you), or email ${DELETE_EMAIL}, then come back.`,
+        ACTIVE_BUSINESS: `You own an active business. Close it in the app first (or delete from the TalkPOS app, which offers to close it for you), or email ${DELETE_EMAIL}, then come back.`,
         OPEN_MARKET_ORDERS: "You have orders that are still in progress. Wait until they're finished.",
         RIDE_SETTLEMENT_DUE: "A ride settlement is still owed. Settle it in the app first.",
         OPEN_INVOICE: "You have an unpaid invoice. Pay it first, or email us.",
@@ -65,35 +65,35 @@ const T = {
     },
     howTitle: "Other ways to delete",
     how: [
-      <><strong>In the AURA app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</>,
+      <><strong>In the TalkKim app:</strong> open <strong>Profile</strong>, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out). Tap <strong>Continue</strong>, then enter the 6-digit code we send to your account&apos;s phone or email.</>,
       MAVEN_DELETE_SHIPPED
-        ? <><strong>In the MAVEN app:</strong> open the <strong>Profile</strong> tab, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in AURA. If an active business you own is the only thing in the way, the delete screen offers to close it for you. It stays closed even if you cancel the deletion; email <a href={`mailto:${DELETE_EMAIL}`}>{DELETE_EMAIL}</a> to reopen it. You can also close it first in the AURA app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</>
-        : <><strong>MAVEN:</strong> your MAVEN account is your AURA account, so delete it in the AURA app as above. If you own a business that is still active, close it first: in AURA open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</>,
+        ? <><strong>In the TalkPOS app:</strong> open the <strong>Profile</strong> tab, scroll to the bottom and tap <strong>Delete account</strong> (under Log Out), on the owner&apos;s own device. The steps are the same as in TalkKim. If an active business you own is the only thing in the way, the delete screen offers to close it for you. It stays closed even if you cancel the deletion; email <a href={`mailto:${DELETE_EMAIL}`}>{DELETE_EMAIL}</a> to reopen it. You can also close it first in the TalkKim app: <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</>
+        : <><strong>TalkPOS:</strong> your TalkPOS account is your TalkKim account, so delete it in the TalkKim app as above. If you own a business that is still active, close it first: in TalkKim open <strong>Profile</strong> → <strong>View details</strong>, tap the red bin icon next to the business, then <strong>Close business</strong>.</>,
       <><strong>Changed your mind?</strong> Sign in again before the deletion date and tap <strong>Cancel deletion</strong>.</>,
       <><strong>By email:</strong> write to <a href={`mailto:${DELETE_EMAIL}?subject=Delete%20my%20account`}>{DELETE_EMAIL}</a> from the email address or phone number on your account, and we&apos;ll confirm it&apos;s you before deleting.</>,
     ],
     whatTitle: "What we delete",
-    what: `Your profile, contacts, chats, location history and the devices linked to your account. ${MAVEN_DELETE_SHIPPED
+    what: `Your profile, Contact Book, calendar, your own books, waiting messages and the devices linked to your account. ${MAVEN_DELETE_SHIPPED
       ? "When you confirm, you're signed out on every device, and the app's copy on your phone is removed."
-      : "When you confirm, AURA signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos)."}`,
+      : "When you confirm, TalkKim signs you out on every device and clears your account data from the app on this phone. Uninstall the app to remove any remaining files (such as saved photos)."}`,
     keepTitle: "What we keep, and for how long",
     keepLead: "Australian law requires us to keep some records. They are archived securely, aren't shown to anyone, and are deleted when the period ends:",
     keep: [
-      "Invoices and receipts for your MAVEN subscription or fees: up to 7 years.",
+      "Invoices and receipts for your TalkPOS subscription or fees: up to 7 years.",
       "Ride records (fares, receipts, driver payments and settlements): up to 7 years. Pickup and drop-off points are removed once any complaint period has closed.",
-      "If you run a business on MAVEN, its sales and tax records are the business's own records. The business must keep them for 5 years (7 for a company). Close the business separately.",
+      "If you run a business on TalkPOS, its sales and tax records are the business's own records. The business must keep them for 5 years (7 for a company). Close the business separately.",
     ],
     keepTail: "Records we keep no longer show your name in any list or screen.",
     timingTitle: "Timing",
     timing: (d) => `Your account is deleted ${d} days after you confirm, and you can cancel before then. Your account data is then deleted or de-identified, except the records listed above that the law requires us to keep. For an email request, the ${d} days start once we've confirmed it's you.`,
     moreTitle: "More",
     more: <>Read our <Link href="/privacy" prefetch={false}>Privacy Policy</Link>, or <Link href="/contact" prefetch={false}>contact us</Link> with any question.</>,
-    address: "eBizco Australia Pty Ltd, 29 Farrer Street Braddon ACT 2612.",
+    address: "EBIZCO AUSTRALIA PTY. LTD., 29 Farrer Street Braddon ACT 2612.",
   },
   vn: {
     lang: "vi",
-    subtitle: "BANOI và MAOI",
-    intro: "Bạn có thể yêu cầu xoá tài khoản BANOI hoặc MAOI bất cứ lúc nào, qua email hoặc (khi có) ngay tại đây và trong ứng dụng. Trang này hướng dẫn cách xoá, những gì chúng tôi xoá và những gì phải giữ lại.",
+    subtitle: "TalkKim và TalkPOS",
+    intro: "Bạn có thể yêu cầu xoá tài khoản TalkKim (trước đây là AURA) hoặc TalkPOS (trước đây là MAVEN) bất cứ lúc nào, qua email hoặc (khi có) ngay tại đây và trong ứng dụng. Trang này hướng dẫn cách xoá, những gì chúng tôi xoá và những gì phải giữ lại.",
     form: {
       title: "Xoá tài khoản tại đây",
       lead: (c) => `Nhập ${c === "email" ? "email" : "số điện thoại"} của tài khoản. Chúng tôi sẽ gửi mã 6 số để xác nhận đúng là bạn.`,
@@ -106,7 +106,7 @@ const T = {
       confirmBody: (d) => `Bạn sẽ bị đăng xuất trên mọi thiết bị. Tài khoản sẽ bị xoá sau ${d} ngày. Trước ngày đó bạn vẫn có thể huỷ: khôi phục tài khoản bằng số điện thoại hoặc email.`,
       confirm: "Xoá tài khoản của tôi", confirming: "Đang xoá…", back: "Không xoá",
       doneTitle: "Đã gửi yêu cầu xoá",
-      done: (due) => `Bạn đã được đăng xuất trên mọi thiết bị. Tài khoản sẽ bị xoá vào ngày ${due}. Muốn giữ lại, hãy khôi phục tài khoản trước ngày đó.`,
+      done: (due) => `Bạn đã được đăng xuất trên mọi thiết bị. Tài khoản sẽ bị xoá vào ngày ${due}. Muốn giữ lại, bạn hãy khôi phục tài khoản trước ngày đó.`,
       already: (due) => `Tài khoản đang chờ xoá. Tài khoản sẽ bị xoá vào ngày ${due}.`,
       blockedTitle: "Cần xử lý trước",
       blocked: {
@@ -115,7 +115,7 @@ const T = {
         RIDE_SETTLEMENT_DUE: "Bạn còn khoản quyết toán chuyến xe chưa trả. Hãy thanh toán trong ứng dụng trước.",
         OPEN_INVOICE: "Bạn còn hoá đơn chưa thanh toán. Hãy thanh toán trước, hoặc gửi email cho chúng tôi.",
       },
-      blockedAgain: "Xong rồi, hãy làm lại tại đây: bạn sẽ cần mã mới.",
+      blockedAgain: "Xong rồi, bạn hãy làm lại tại đây: bạn sẽ cần mã mới.",
       errors: {
         OTP_WRONG: (n) => `Mã chưa đúng.${n != null ? ` Còn ${n} lần thử.` : ""}`,
         OTP_EXPIRED: "Mã đã hết hạn. Hãy làm lại để nhận mã mới.",
@@ -133,26 +133,26 @@ const T = {
     howTitle: "Các cách xoá khác",
     how: [
       ...(VN_INAPP_SHIPPED ? [
-        <><strong>Trong ứng dụng BANOI:</strong> mở <strong>Hồ sơ</strong>, chọn <strong>Xoá tài khoản</strong> (chữ đỏ ngay dưới Đăng xuất), chọn <strong>Tiếp tục</strong>, rồi nhập mã 6 số gửi tới số điện thoại hoặc email của tài khoản. Muốn giữ lại tài khoản, chọn <strong>Huỷ xoá tài khoản</strong> trước ngày xoá.</>,
+        <><strong>Trong ứng dụng TalkKim:</strong> mở <strong>Hồ sơ</strong>, chọn <strong>Xoá tài khoản</strong> (chữ đỏ ngay dưới Đăng xuất), chọn <strong>Tiếp tục</strong>, rồi nhập mã 6 số gửi tới số điện thoại hoặc email của tài khoản. Muốn giữ lại tài khoản, chọn <strong>Huỷ xoá tài khoản</strong> trước ngày xoá.</>,
       ] : []),
       <><strong>Đổi ý?</strong> Trước ngày xoá bạn vẫn có thể huỷ: khôi phục tài khoản bằng số điện thoại hoặc email.</>,
       <><strong>Qua email:</strong> gửi tới <a href={`mailto:${DELETE_EMAIL}?subject=Xoa%20tai%20khoan`}>{DELETE_EMAIL}</a> từ email hoặc số điện thoại của tài khoản; chúng tôi xác nhận đúng là bạn rồi mới xoá.</>,
     ],
     whatTitle: "Những gì chúng tôi xoá",
-    what: "Hồ sơ, lịch, thiết bị và tin nhắn chờ chuyển của bạn. Khi bạn xác nhận, bạn được đăng xuất trên mọi thiết bị và bản lưu trong ứng dụng trên điện thoại bị xoá. Tin nhắn đã gửi vẫn nằm trên điện thoại người nhận.",
+    what: "Hồ sơ, danh bạ TalkKim, lịch, sổ thu chi, thiết bị và tin nhắn chờ chuyển của bạn. Khi bạn xác nhận, bạn được đăng xuất trên mọi thiết bị và bản lưu trong ứng dụng trên điện thoại bị xoá. Tin nhắn đã gửi vẫn nằm trên điện thoại người nhận.",
     keepTitle: "Những gì phải giữ lại",
     keepLead: "Chúng tôi chỉ giữ lại, không kèm tên của bạn trong bất kỳ danh sách hay màn hình nào:",
     keep: [
       "Nhật ký an ninh: 24 tháng.",
       "Bản ghi đồng ý không kèm tên: 24 tháng.",
-      "Nếu bạn kinh doanh trên MAOI, sổ sách bán hàng và thuế là hồ sơ của hộ kinh doanh, do hộ kinh doanh lưu giữ theo luật. Hãy đóng cửa hàng riêng.",
+      "Nếu bạn kinh doanh trên TalkPOS, sổ sách bán hàng và thuế là hồ sơ của hộ kinh doanh, do hộ kinh doanh lưu giữ theo luật. Hãy đóng cửa hàng riêng.",
     ],
     keepTail: "",
     timingTitle: "Thời hạn",
     timing: (d) => `Tài khoản bị xoá ${d} ngày sau khi bạn xác nhận; bạn có thể huỷ trước thời hạn đó. Với yêu cầu qua email, ${d} ngày được tính từ khi chúng tôi xác nhận đúng là bạn.`,
     moreTitle: "Thêm",
     more: <>Xem <Link href="/privacy" prefetch={false}>Chính sách quyền riêng tư</Link>, hoặc <Link href="/contact" prefetch={false}>liên hệ</Link> nếu có câu hỏi.</>,
-    address: "eBizco Australia Pty Ltd, 29 Farrer Street Braddon ACT 2612.",
+    address: "EBIZCO AUSTRALIA PTY. LTD., 29 Farrer Street Braddon ACT 2612.",
   },
 };
 
@@ -329,8 +329,8 @@ export default function DeleteAccount() {
   return (
     <div lang={t.lang}>
       <div style={{ marginBottom: 20 }}>
-        {tab("au", "Australia · AURA / MAVEN")}
-        {tab("vn", "Việt Nam · BANOI / MAOI")}
+        {tab("au", "Australia · TalkKim / TalkPOS")}
+        {tab("vn", "Việt Nam · TalkKim / TalkPOS")}
       </div>
       <div className="title-area"><span className="sec-subtitle">{t.subtitle}</span>
         <p className="sec-title3 h1">{market === "vn" ? "Xoá tài khoản" : "Delete your account"}</p>

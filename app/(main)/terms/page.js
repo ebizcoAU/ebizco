@@ -3,7 +3,7 @@ import { TERMS_EFFECTIVE_DATE as EFFECTIVE_DATE, TERMS_DRAFT } from "@/lib/terms
 
 export const metadata = {
   title: "Terms of Use",
-  description: "Terms of use for the AURA, MAVEN, BANOI and MAOI apps.",
+  description: "Terms of use for the TalkKim and TalkPOS apps.",
   alternates: { canonical: "/terms" },
   ...(TERMS_DRAFT ? { robots: { index: false, follow: false } } : {}),
 };
@@ -14,7 +14,7 @@ const SECTIONS = [
   { id: "about", title: "1. About these terms", body: null },
   { id: "accounts", title: "2. Your account", body: null },
   { id: "use", title: "3. Using the apps", body: null },
-  { id: "business", title: "4. Businesses on MAVEN and MAOI", body: null },
+  { id: "business", title: "4. Businesses on TalkPOS", body: null },
   { id: "payments", title: "5. Fees and payments", body: null },
   { id: "privacy", title: "6. Privacy", body: <>See our <Link href="/privacy" prefetch={false}>Privacy Policy</Link>.</> },
   { id: "ending", title: "7. Ending your account", body: <>You can delete your account at any time: see <Link href="/delete-account" prefetch={false}>Delete your account</Link>.</> },
@@ -47,7 +47,7 @@ export default function TermsPage() {
   <div className="container wow fadeInUp" data-wow-delay="0.2s">
     <div className="row justify-content-left text-left">
       <div className="col-xl-10">
-        <div className="title-area"><span className="sec-subtitle">AURA, MAVEN, BANOI and MAOI</span>
+        <div className="title-area"><span className="sec-subtitle">TalkKim and TalkPOS</span>
           <p className="sec-title3 h1">Terms of Use</p>
         </div>
         {TERMS_DRAFT && (
@@ -55,7 +55,7 @@ export default function TermsPage() {
             <strong>Draft, not yet in effect.</strong> These terms are still being written; the final text will be published here.
           </div></div>
         )}
-        <p className="pb-4">Effective date: {EFFECTIVE_DATE || tbc}. These terms are between you and Ebizco Australia Pty Ltd (ABN 44 091 466 858).</p>
+        <p className="pb-4">Effective date: {EFFECTIVE_DATE || tbc}. These terms are between you and EBIZCO AUSTRALIA PTY. LTD. (ABN 44 091 466 858).</p>
         {SECTIONS.map((s) => (
           <div key={s.id} id={s.id}>
             <div className="h3"><span className="sec-subtitle">{s.title}</span></div>
