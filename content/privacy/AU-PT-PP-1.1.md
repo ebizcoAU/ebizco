@@ -1,5 +1,5 @@
 *What changed from 1.0 (22 Oct 2026): one-to-one calls now go directly between the two phones (see "Calls", and the new row on our relay server); "Your QR code"; the location row names who receives the address at your pin and the weather position; "Where am I?".*
-**1. Who we are.** The AURA pre-trial is provided by **EBIZCO AUSTRALIA PTY LTD** (ABN 44 091 466 858, 29 Farrer Street, Braddon ACT 2612) ("we"). Privacy contact: **admin@ebizco.com.au**. This policy follows the *Privacy Act 1988* (Cth) and the Australian Privacy Principles (APPs). The pre-trial is invite-only, free and for people **16 and over** (at sign-up you tick "I am 16 or older").
+**1. Who we are.** The AURA pre-trial is provided by **EBIZCO AUSTRALIA PTY. LTD.** (ABN 44 091 466 858, 29 Farrer Street, Braddon ACT 2612) ("we"). Privacy contact: **admin@ebizco.com.au**. This policy follows the *Privacy Act 1988* (Cth) and the Australian Privacy Principles (APPs). The pre-trial is invite-only, free and for people **16 and over** (at sign-up you tick "I am 16 or older").
 
 **2. What we collect, why, where, and for how long**
 | Information | Why | Where | Kept |

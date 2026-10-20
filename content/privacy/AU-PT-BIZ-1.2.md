@@ -1,7 +1,7 @@
 *What changed from 1.1 (22 Oct 2026): a row for a driver's photo.*
 
 > **MAVEN pre-trial: your venue's data**
-> - The MAVEN pre-trial is run by **EBIZCO AUSTRALIA PTY LTD**, free and invite-only. Data is stored on **servers in Australia**. Your own account is covered by the **AURA Privacy Policy**.
+> - The MAVEN pre-trial is run by **EBIZCO AUSTRALIA PTY. LTD.**, free and invite-only. Data is stored on **servers in Australia**. Your own account is covered by the **AURA Privacy Policy**.
 > - We **store and process your venue's records for you**: reservations, orders and sales (MAVEN keeps **no staff records**; staff use the shared device). **You decide what to record, and you tell your staff and customers** (we give you the wording).
 > - **The till and the kiosk work by touch in this pre-trial**; voice is off for now. Nothing staff or customers say or type is sent to an AI service.
 > - **Your venue carries on after the pre-trial:** your records stay as they are when the MAVEN trial and launch begin (same company, same Australian servers). We'll show you any policy changes in the app first.
