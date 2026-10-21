@@ -62,6 +62,8 @@ const INTERNAL_REFS = [
   /Finance note/i,
   ...(process.argv.includes("--draft") ? [] : [/\[(?:OPERATOR|OPEN|CONFIRM)/]),
 ];
+// 1-based line in the source file of the first match after the heading (body lines are filtered, so no index map).
+const srcLine = (text) => lines.findIndex((l, i) => i > start && l.includes(text)) + 1;
 const leaks = body.flatMap((l) => INTERNAL_REFS.flatMap((re) => {
   const m = l.match(re);
   return m ? [`  line ${srcLine(m[0])}: ${m[0]}`] : [];

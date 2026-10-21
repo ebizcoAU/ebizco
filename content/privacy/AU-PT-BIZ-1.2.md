@@ -1,4 +1,4 @@
-*What changed from 1.1 (22 Oct 2026): MAVEN is now called TalkPOS, and its assistant is Kim; a row for a driver's photo.*
+*What changed from 1.1 (22 Oct 2026): MAVEN is now called TalkPOS, and its assistant is Kim; a row for a driver's photo; a row for a driver's position (invited ride pilot); our hosting provider is now OVHcloud (Sydney).*
 
 > **TalkPOS pre-trial: your venue's data**
 > - The TalkPOS pre-trial is run by **EBIZCO AUSTRALIA PTY. LTD.**, free and invite-only. Data is stored on **servers in Australia**. Your own account is covered by the **TalkKim Privacy Policy**.
@@ -16,9 +16,10 @@
 | Menu, stock, suppliers, purchase orders | running the POS and stock | Australia | while the venue is active |
 | Devices (type, role POS/KDS/kiosk/CDS, install id) | pairing, sending orders to the kitchen | Australia | until the device is removed |
 | A driver's photo (if you drive with TalkPOS and add one) | shown to the rider of your trip, from when you accept until 24 hours after the trip ends, so they can find you; **never used to check your identity or match your face** | stored on our Australian server, private | until you replace it, or until your account is deleted (longer only on a legal hold) |
+| Your position while you're online as a driver (**invited ride pilot only**; ride is off for everyone else) | offering you trips near you; showing your car to the rider of your trip, from when you accept until the trip ends, and to our support staff during the trip for safety | phone → our Australian server; shown to your rider | **only your latest position** while you're online, replaced as you move; **no moving trail is kept**; cleared as soon as you go offline (or, if a trip is still running, when it ends), and after 5 minutes if the app stops sending; we also note where you were each time you go online or offline, kept **90 days**; a trip's pickup and drop-off points are kept **90 days** (fare questions and disputes), longer only while a complaint is open |
 | The venue's sign-in PIN (one code your staff share) | knowing the device is used by your venue | checked by our Australian server, which keeps only a salted, slow hash; this device keeps a salted, slow check value for offline use (never synced or backed up); repeated wrong tries lock it | until you change it; removed when the venue closes |
 
 - **Voice:** voice is off at the till and the kiosk in this pre-trial (touch only), and nothing typed is sent to an AI service. When voice is switched on, speech will stay on the device (as in TalkKim), and we'll update this notice first.
-- **Disclosure:** our hosting provider, Vultr (data centre in Sydney, Australia); Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
+- **Disclosure:** our hosting provider, OVHcloud (data centres in Sydney, Australia); Google/Apple (push notifications, USA). Authorities where Australian law requires it. **Not** to other venues or marketers.
 - **Website:** Our website, ebizco.com.au, is hosted in Singapore. When you visit it, the web server records standard logs (your IP address, browser type, the page and time), kept 14 days for security, then deleted.
 - **Access and correction:** staff and customers ask **the venue** first; the venue (or they directly) can write to admin@ebizco.com.au. We reply within 30 days; complaints to the OAIC.
