@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 // One page for both markets (XF-371 S1-web, PM 2026-10-16): Australia (English) and Việt Nam
-// (Vietnamese), both TalkKim / TalkPOS since XF-397. /delete-account?market=vn opens the Vietnamese view.
+// (Vietnamese), both TalkKim / TalkPOS since XF-397. /delete-account?m=vn (or ?market=vn, ?lang=vi) opens the Vietnamese view.
 export default function DeleteAccountPage() {
   return (
     <>

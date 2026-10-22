@@ -31,7 +31,10 @@ npm run lint    # lint the project
 ## Deploy notes (app pages)
 
 - **`/delete-account` self-service form.** The form calls each market's Nexus API, set at **build** time:
-  `NEXT_PUBLIC_NEXUS_API_AU=https://api-au.ebizco.com.au/api/v1` (and later `NEXT_PUBLIC_NEXUS_API_VN`).
+  `NEXT_PUBLIC_NEXUS_API_AU=https://api-au.ebizco.com.au/api/v1` and, for the VN pretrial (VN-PT a, OVH Singapore),
+  `NEXT_PUBLIC_NEXUS_API_VN=https://api-vn.ebizco.com.au/api/v1`. Both go in `.env.production.local` (one line each;
+  append, don't overwrite the AU line) and need a rebuild: the values are baked in at build, not read at run time.
+  The VN view links as `/delete-account?m=vn` (`?market=vn` and `?lang=vi` also work).
   Unset = no form for that market (the page then shows only the in-app and email paths), so leave it unset
   until the AU production API answers. The page text says AU 23 days / VN 30 days (`GRACE_DAYS`); the real
   due date comes from the API reply. The API must allow CORS from `https://ebizco.com.au` and

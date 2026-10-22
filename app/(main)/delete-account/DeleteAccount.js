@@ -12,8 +12,9 @@ const DELETE_EMAIL = "admin@ebizco.com.au"; // operator 2026-10-15
 // Grace period (PM 2026-10-16, backend RATE-1 setting account_deletion_grace_days): the request reply
 // carries the real due date; these numbers are only the page text.
 const GRACE_DAYS = { au: 23, vn: 30 };
-// AU sends codes by email until an SMS gateway exists (OTP_SMS off); VN by SMS.
-const FALLBACK_CHANNEL = { au: "email", vn: "sms" };
+// Both markets send codes by email: AU until an SMS gateway exists (OTP_SMS off); VN OTP is email-only for the
+// pretrial (VN-PT a, PM nexus-73 2026-10-22).
+const FALLBACK_CHANNEL = { au: "email", vn: "email" };
 // true from 1.0.886 (ftpos2 2026-10-15: ftpos 6c5c7944, ACCOUNT_DELETION on in AU builds, full phone
 // wipe). false = the pre-886 wording: TalkPOS deletes through TalkKim, and the phone wipe is partial.
 const MAVEN_DELETE_SHIPPED = true;
@@ -310,13 +311,15 @@ export default function DeleteAccount() {
   const [market, setMarket] = useState("au");
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
-    if (q.get("market") === "vn" || q.get("lang") === "vi") setMarket("vn");
+    // ?m=vn is what the app and Finance's docs link to (PM nexus-73 2026-10-22); ?market=vn and ?lang=vi still work.
+    if (q.get("market") === "vn" || q.get("m") === "vn" || q.get("lang") === "vi") setMarket("vn");
   }, []);
   const t = T[market];
   const pick = (m) => {
     setMarket(m);
     const u = new URL(window.location.href);
-    if (m === "vn") u.searchParams.set("market", "vn"); else u.searchParams.delete("market");
+    if (m === "vn") u.searchParams.set("market", "vn");
+    else { u.searchParams.delete("market"); u.searchParams.delete("m"); if (u.searchParams.get("lang") === "vi") u.searchParams.delete("lang"); }
     window.history.replaceState(null, "", u);
   };
   const tab = (m, label) => (
