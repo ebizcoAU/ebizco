@@ -5,7 +5,7 @@
 //
 // The section runs from its heading to the next "---" rule or "##" heading. Only builder-facing marks are
 // removed: Finance's ◆ row marker, the in-app button row "[Read the full notice] [OK]" and an italic
-// "*( … )*" editor note directly under the heading. Everything else, including OPEN / CONFIRM / OPERATOR
+// "*( … )*" editor note among the leading italic lines. Everything else, including OPEN / CONFIRM / OPERATOR
 // markers, is kept (with --draft) so the page shows them until Finance closes them. The heading's effective date (or its
 // "[date]" placeholder) goes into content/privacy/<version>.meta.json with the source commit.
 // Internal refs and editor marks in the user text fail the sync (exit 1, nothing written); see INTERNAL_REFS.
@@ -40,7 +40,10 @@ for (let i = start + 1; i < lines.length; i++) {
 
 let body = lines.slice(start + 1, end);
 while (body.length && !body[0].trim()) body.shift();
-if (/^\*\(.*\)\*$/.test(body[0]?.trim() ?? "")) body.shift();
+// Editor note: among the leading italic lines (Finance may put a "What changed" line above it).
+for (let i = 0; i < body.length && /^\*.*\*$/.test(body[i].trim()); i++) {
+  if (/^\*\(.*\)\*$/.test(body[i].trim())) { body.splice(i, 1); break; }
+}
 body = body
   .filter((l) => l.trim() !== "> [Read the full notice] [OK]")
   .map((l) => l.replace(/ ?◆ ?/g, (m) => (m.startsWith(" ") && m.endsWith(" ") ? " " : "")));
