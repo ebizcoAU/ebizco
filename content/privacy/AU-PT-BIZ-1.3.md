@@ -1,4 +1,4 @@
-*What changed from 1.2 ([re-date]): how long copies stay in our encrypted backups after something is deleted.*
+*What changed from 1.2 (25 Oct 2026): how long copies stay in our encrypted backups after something is deleted.*
 *What changed from 1.1 (22 Oct 2026): MAVEN is now called TalkPOS, and its assistant is Kim; a row for a driver's photo; a row for a driver's position (invited ride pilot); our hosting provider is now OVHcloud (Sydney).*
 
 > **TalkPOS pre-trial: your venue's data**
