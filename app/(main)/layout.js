@@ -4,8 +4,6 @@ import Footer from "./components/Footer";
 import "./globals.css";
 import { SITE, baseMetadata, organizationJsonLd } from "@/lib/site";
 
-const FONTS = "https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=Fira+Sans:wght@400;500&display=swap";
-
 export const metadata = {
   ...baseMetadata,
   title: {
@@ -27,12 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-AU" className="no-js">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* LOAD-PRIV-1: the Google Fonts stylesheet is added by script, so it never blocks rendering; when
-            fonts.googleapis.com didn't answer, the blocking <link> left pages blank for minutes. */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(d){var l=d.createElement("link");l.rel="stylesheet";l.href=${JSON.stringify(FONTS)};d.head.appendChild(l)})(document)` }} />
-        <noscript><link href={FONTS} rel="stylesheet" /></noscript>
+        {/* LOAD-PRIV-1: self-hosted fonts (public/assets/fonts, font-display: swap), no Google requests; a stalled
+            fonts.googleapis.com used to leave the page blank for minutes. */}
+        <link rel="stylesheet" href="/assets/fonts/ebizco-fonts.css" />
         <link rel="stylesheet" href="/assets/css/app.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />

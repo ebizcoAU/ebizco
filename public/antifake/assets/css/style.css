@@ -55,7 +55,7 @@
 
 /* ================================================== */
 
-@import url(https://fonts.googleapis.com/css?family=Inter:400,200,300,500,600,700,800);
+/* LOAD-PRIV-1: Inter is self-hosted (/assets/fonts/antifake-fonts.css, linked in app/antifake/layout.js); this Google @import blocked rendering when fonts.googleapis.com stalled. */
 
 /* ================================================== */
 

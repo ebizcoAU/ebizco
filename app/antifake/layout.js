@@ -19,12 +19,9 @@ export default function AntifakeLayout({ children }) {
   return (
     <html lang="en-AU">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Inter:400,200,300,500,600,700,800"
-          rel="stylesheet"
-        />
+        {/* LOAD-PRIV-1: self-hosted fonts (public/assets/fonts, font-display: swap), no Google requests; a stalled
+            fonts.googleapis.com used to leave the page blank. */}
+        <link rel="stylesheet" href="/assets/fonts/antifake-fonts.css" />
         <link rel="stylesheet" href="/antifake/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/antifake/assets/css/style.css" />
         <link rel="stylesheet" href="/antifake/assets/css/scheme-01.css" />

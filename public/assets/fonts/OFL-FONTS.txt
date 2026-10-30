@@ -1,0 +1,4 @@
+Self-hosted web fonts (LOAD-PRIV-1, 2026-10-30), copied unmodified from Google Fonts:
+Exo, Fira Sans, Inter, Playfair Display (latin, latin-ext and vietnamese subsets; *.woff2 in this folder).
+Each is licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org/open-font-license-official-text/
+Copyright notices are in each font file's name table. The fa-* files are Font Awesome and are not covered by this note.

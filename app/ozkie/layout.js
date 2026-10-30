@@ -20,12 +20,9 @@ export default function OzkieLayout({ children }) {
   return (
     <html lang="en-AU">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* LOAD-PRIV-1: self-hosted fonts (public/assets/fonts, font-display: swap), no Google requests; a stalled
+            fonts.googleapis.com used to leave the page blank. */}
+        <link rel="stylesheet" href="/assets/fonts/ozkie-fonts.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
       </head>
       <body className="ozkie">
