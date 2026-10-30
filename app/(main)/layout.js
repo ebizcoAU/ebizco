@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import "./globals.css";
 import { SITE, baseMetadata, organizationJsonLd } from "@/lib/site";
 
+const FONTS = "https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=Fira+Sans:wght@400;500&display=swap";
+
 export const metadata = {
   ...baseMetadata,
   title: {
@@ -27,13 +29,16 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=Fira+Sans:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
+        {/* LOAD-PRIV-1: the Google Fonts stylesheet is added by script, so it never blocks rendering; when
+            fonts.googleapis.com didn't answer, the blocking <link> left pages blank for minutes. */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(d){var l=d.createElement("link");l.rel="stylesheet";l.href=${JSON.stringify(FONTS)};d.head.appendChild(l)})(document)` }} />
+        <noscript><link href={FONTS} rel="stylesheet" /></noscript>
         <link rel="stylesheet" href="/assets/css/app.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        {/* LOAD-PRIV-1: main.js hides the preloader only on window "load", which a slow third party can hold for
+            minutes. Hide it on DOMContentLoaded, and after 3 s whatever happens. */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(d){function h(){var p=d.querySelector(".preloader");if(p)p.style.display="none"}d.addEventListener("DOMContentLoaded",h);setTimeout(h,3000)})(document)` }} />
       </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
