@@ -45,3 +45,7 @@ npm run lint    # lint the project
   also writes `<version>.meta.json` (the effective date from Finance's heading, and the source commit); the
   version per page is in `lib/privacyNotices.js`. While any open marker remains or `effective` is null,
   the page shows a draft banner and is `noindex`. Deploy only on the PM's word.
+- **`/privacy/talkkim` is a bare page** (LOAD-PRIV-1): a route handler (`app/(main)/privacy/talkkim/route.js`,
+  `lib/bareNotice.js`) that returns one self-contained HTML file (inline CSS, system fonts, no JS, no images, ~16 KB),
+  built from the same synced text. The site template's preloader waits for `window.onload`, and the render-blocking
+  Google Fonts stylesheet could hold that for minutes in the app's in-app browser. `/privacy/talkim` 301s to it.

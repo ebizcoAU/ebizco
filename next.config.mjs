@@ -10,6 +10,8 @@ const nextConfig = {
     return [
       { source: "/privacy/aura", destination: "/privacy/talkkim", permanent: true },
       { source: "/privacy/maven", destination: "/privacy/talkpos", permanent: true },
+      // LOAD-PRIV-1 (operator, 2026-10-30): the operator's spelling. 301 as asked (statusCode, not permanent).
+      { source: "/privacy/talkim", destination: "/privacy/talkkim", statusCode: 301 },
     ];
   },
 };

@@ -36,7 +36,7 @@ export default function PrivacyNotice({ app }) {
         {n.renameNote && <p className="pb-2"><strong>{n.renameNote}</strong></p>}
         <p className="pb-2">Version {n.version} · Effective: {n.effective || <mark className="notice-open">[date to come]</mark>}</p>
         {other && (
-          <p className="pb-2">Read this with the <Link href={other.path} prefetch={false}>{other.title}</Link> ({other.version}), which covers the owner&apos;s own account.</p>
+          <p className="pb-2">Read this with the <a href={other.path}>{other.title}</a> ({other.version}), which covers the owner&apos;s own account.</p>
         )}
         {renderNotice(n.md)}
       </div>
